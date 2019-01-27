@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,251 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prombezopasnost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cax-Lt-I5d">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-AD-8gu">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iD3-Hm-bfv" userLabel="height = 30"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="vE9-Dd-Xrk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Назад">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nazad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sw8-KO-Ht7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-wS-uid">
+                                        <rect key="frame" x="128.5" y="0.0" width="118" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3ur-pQ-xWQ" userLabel="height = 30"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="VW2-kg-rVc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Меню">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2p-7w-sQj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-IS-Fpf">
+                                        <rect key="frame" x="256.5" y="0.0" width="118.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IEu-XG-3as" userLabel="height = 30"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="QI3-uj-h84"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Вперед">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="vpered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYO-28-8TK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bnA-WJ-PkA"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtB-Ff-wV6" userLabel="Полоска">
+                                <rect key="frame" x="0.0" y="41" width="375" height="10"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="XIV-yY-Kpm"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-74-rs4" userLabel="Шкала">
+                                <rect key="frame" x="0.0" y="41" width="4.5" height="10"/>
+                                <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="KIr-Ir-Uy2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-0E-KFp" userLabel="kursNomer">
+                                <rect key="frame" x="0.0" y="-24" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Ghg-3d-CvZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="А.1. Основы промышленной безопасности">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="viborKurs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cje-q9-t4s"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-2P-NoC">
+                                <rect key="frame" x="0.0" y="76" width="375" height="541"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-uP-nrm" userLabel="voprosText">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
+                                        <string key="text">Уполномочены ли иные федеральные органы исполнительной власти, помимо Федеральной службы по экологическому, технологическому и атомному надзору, осуществлять специальные разрешительные, контрольные или надзорные функции в области промышленной безопасности?</string>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-bX-ZdO" userLabel="A">
+                                        <rect key="frame" x="0.0" y="154.5" width="375" height="77.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6b-UH-Mzp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-Ja-eVN" userLabel="B">
+                                        <rect key="frame" x="0.0" y="232" width="375" height="77"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52i-D0-Cki"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-jx-fUx" userLabel="V">
+                                        <rect key="frame" x="0.0" y="309" width="375" height="77.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ED-Aq-kOI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-vK-v5q" userLabel="G">
+                                        <rect key="frame" x="0.0" y="386.5" width="375" height="77"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNC-0J-RLE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-yu-ycl" userLabel="D">
+                                        <rect key="frame" x="0.0" y="463.5" width="375" height="77.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wY2-TX-RDP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jqv-jx-fUx" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="36a-Va-ts5"/>
+                                    <constraint firstItem="o7c-yu-ycl" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="RGM-Tq-vao"/>
+                                    <constraint firstItem="7EB-Ja-eVN" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="Y5R-Bd-FjA"/>
+                                    <constraint firstItem="o7c-yu-ycl" firstAttribute="height" secondItem="iPD-uP-nrm" secondAttribute="height" multiplier="1:2" id="o8s-Xp-ZFA"/>
+                                    <constraint firstItem="YFJ-vK-v5q" firstAttribute="height" secondItem="jqv-jx-fUx" secondAttribute="height" id="y0z-HF-WAf"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Yv-tf3" userLabel="voprosNomer">
+                                <rect key="frame" x="259" y="51" width="100" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Fql-Mk-VNN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mbf-Vc-kqc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="10/10">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="viborVopros:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsE-2E-5s0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42R-3Q-yos" userLabel="biletNomer">
+                                <rect key="frame" x="16" y="51" width="100" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1TK-3N-XFU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lpP-aN-7Cj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Билет №10">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="viborBilet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qm4-oC-8Br"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mna-Yv-tf3" secondAttribute="trailing" constant="16" id="1Rt-fj-6gi"/>
+                            <constraint firstItem="YtB-Ff-wV6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EjP-IP-Ndm"/>
+                            <constraint firstItem="42R-3Q-yos" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FTl-Y3-2kV"/>
+                            <constraint firstItem="Cax-Lt-I5d" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Iq9-bK-uZ5"/>
+                            <constraint firstItem="YtB-Ff-wV6" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" id="L1M-Vu-TUb"/>
+                            <constraint firstAttribute="trailing" secondItem="gwe-2P-NoC" secondAttribute="trailing" id="Ld3-xe-25O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cax-Lt-I5d" secondAttribute="trailing" id="RUq-g4-cqU"/>
+                            <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="Mna-Yv-tf3" secondAttribute="bottom" id="Rbl-3l-iS3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jEB-74-rs4" secondAttribute="trailing" symbolic="YES" id="YYZ-9y-J9L"/>
+                            <constraint firstItem="Mna-Yv-tf3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="42R-3Q-yos" secondAttribute="trailing" constant="8" symbolic="YES" id="Zel-kE-y9J"/>
+                            <constraint firstItem="jEB-74-rs4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fJc-5H-rGp"/>
+                            <constraint firstItem="42R-3Q-yos" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" constant="10" id="gce-Fb-Ff0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gwe-2P-NoC" secondAttribute="bottom" constant="50" id="gq5-Uc-rcw"/>
+                            <constraint firstItem="bkR-0E-KFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mAO-ya-Ebr"/>
+                            <constraint firstItem="bkR-0E-KFp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="nav-cR-1QT"/>
+                            <constraint firstItem="YtB-Ff-wV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oJt-Sz-FG5"/>
+                            <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" constant="67" id="p4n-ka-2MQ"/>
+                            <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="42R-3Q-yos" secondAttribute="bottom" id="sI8-Eh-hkW"/>
+                            <constraint firstItem="Cax-Lt-I5d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJD-51-xXK"/>
+                            <constraint firstItem="gwe-2P-NoC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uT0-rL-Tht"/>
+                            <constraint firstItem="jEB-74-rs4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="w0d-iK-wW8"/>
+                            <constraint firstItem="Mna-Yv-tf3" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" constant="10" id="wrO-Gz-43L"/>
+                            <constraint firstItem="bkR-0E-KFp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ylV-bQ-j2t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="biletNomer" destination="42R-3Q-yos" id="ZIG-Hb-hvy"/>
+                        <outlet property="kursNomer" destination="bkR-0E-KFp" id="zeI-8U-FdH"/>
+                        <outlet property="voprosNomer" destination="Mna-Yv-tf3" id="NZY-gv-qrY"/>
+                        <outlet property="voprosText" destination="iPD-uP-nrm" id="vwf-TP-2GU"/>
+                        <outletCollection property="otvetText" destination="ayX-bX-ZdO" collectionClass="NSMutableArray" id="ehu-jp-qCL"/>
+                        <outletCollection property="otvetText" destination="7EB-Ja-eVN" collectionClass="NSMutableArray" id="Vz2-jg-egb"/>
+                        <outletCollection property="otvetText" destination="jqv-jx-fUx" collectionClass="NSMutableArray" id="Xf8-Kl-BO5"/>
+                        <outletCollection property="otvetText" destination="YFJ-vK-v5q" collectionClass="NSMutableArray" id="fN4-x1-r5P"/>
+                        <outletCollection property="otvetText" destination="o7c-yu-ycl" collectionClass="NSMutableArray" id="hJN-mt-GQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="49.275362318840585" y="22.826086956521742"/>
         </scene>
     </scenes>
 </document>

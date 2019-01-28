@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     // функция показывает верные ответы
     func otobragenie(){
         
-        print("Номер вопроса \(nomerVoprosa)")
+ //       print("Номер вопроса \(nomerVoprosa)")
         
         if nomerVoprosa >= 1 && nomerVoprosa <= vsegoVoprosov{
             
@@ -84,20 +84,17 @@ class ViewController: UIViewController {
             // задаем текст вопроса
             voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
             
-            
-            
             //количество ответов в вопросе
             vsegoOtvetov = otvetiArray[nomerVoprosa - 1].count
             
             //цикл для прогрузки ответов
             for i in 1...vsegoOtvetov{
-                // задаем текст ответов в кнопки
+                //инициализируем кнопку
                 var button:UIButton = UIButton()
                 button = view.viewWithTag(i) as! UIButton
-                button.setTitle(otvetiArray[nomerVoprosa - 1][i - 1], for: .normal)
                 
-                //выключаем пустые кнопки
-                viklucharmKnopki(i: i, btn: button)
+                // задаем текст ответов в кнопки
+                textOtvetov(i: i, btn:button)
                 
                 //задаем цвета кнопок для выбранных ответов
                 cvetKnopki(btn: button)
@@ -105,28 +102,17 @@ class ViewController: UIViewController {
                 //ответ черным текстом
                 cherniyAnswer(btn: button)
                 
+                //выключаем пустые кнопки
+                viklucharmKnopki(i: i, btn: button)
+                
             }
         }
     }
     
-    //функция кнопки черного ответа
-    func cherniyAnswer(btn:UIButton){
-        if btn.tag == vibraniyOtvetArray[nomerVoprosa]{
-            btn.setTitleColor(UIColor.black, for: .normal)
-        }
+    //функция прогрузки ответов в кнопки
+    func textOtvetov(i:Int, btn:UIButton){
+        btn.setTitle(otvetiArray[nomerVoprosa - 1][i - 1], for: .normal)
     }
-    
-    
-    //функция выключаем пустые кнопки
-    func viklucharmKnopki (i: Int, btn:UIButton){
-        if otvetiArray[nomerVoprosa - 1][i - 1] == ""{
-            btn.isHidden = true
-        }
-        else{
-            btn.isHidden = false
-        }
-    }
-    
     //функция покраски кнопок для выбранных ответов
     func cvetKnopki (btn:UIButton){
         if vibraniyOtvetArray[nomerVoprosa] > 0 {
@@ -138,6 +124,23 @@ class ViewController: UIViewController {
             btn.isEnabled = true
             btn.setTitleColor(UIColor.blue, for: .normal)
             voprosTextOutlet.textColor = UIColor.black
+        }
+    }
+    
+    //функция кнопки черного ответа
+    func cherniyAnswer(btn:UIButton){
+        if btn.tag == vibraniyOtvetArray[nomerVoprosa]{
+            btn.setTitleColor(UIColor.black, for: .normal)
+        }
+    }
+    
+    //функция выключаем пустые кнопки
+    func viklucharmKnopki (i: Int, btn:UIButton){
+        if otvetiArray[nomerVoprosa - 1][i - 1] == ""{
+            btn.isEnabled = false
+        }
+        else{
+            btn.isEnabled = true
         }
     }
     

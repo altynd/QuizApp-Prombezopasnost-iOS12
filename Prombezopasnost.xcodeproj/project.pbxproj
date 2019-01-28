@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F745A85621FE071200000DCF /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F745A85521FE071200000DCF /* Questions.swift */; };
-		F7C7524721FE46F5000C1660 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C7524621FE46F5000C1660 /* SecondViewController.swift */; };
+		F78B0DCE21FEEB8300574A19 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B0DCD21FEEB8300574A19 /* SecondViewController.swift */; };
 		F7FA09872192BE0300306134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA09862192BE0300306134 /* AppDelegate.swift */; };
 		F7FA09892192BE0300306134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA09882192BE0300306134 /* ViewController.swift */; };
 		F7FA098C2192BE0300306134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7FA098A2192BE0300306134 /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		F745A85521FE071200000DCF /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		F7C7524621FE46F5000C1660 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F78B0DCD21FEEB8300574A19 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7FA09832192BE0300306134 /* Prombezopasnost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prombezopasnost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FA09862192BE0300306134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FA09882192BE0300306134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				F7FA09862192BE0300306134 /* AppDelegate.swift */,
 				F745A85521FE071200000DCF /* Questions.swift */,
-				F7C7524621FE46F5000C1660 /* SecondViewController.swift */,
 				F7FA09882192BE0300306134 /* ViewController.swift */,
+				F78B0DCD21FEEB8300574A19 /* SecondViewController.swift */,
 				F7FA098A2192BE0300306134 /* Main.storyboard */,
 				F7FA098D2192BE0400306134 /* Assets.xcassets */,
 				F7FA098F2192BE0400306134 /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C7524721FE46F5000C1660 /* SecondViewController.swift in Sources */,
+				F78B0DCE21FEEB8300574A19 /* SecondViewController.swift in Sources */,
 				F745A85621FE071200000DCF /* Questions.swift in Sources */,
 				F7FA09892192BE0300306134 /* ViewController.swift in Sources */,
 				F7FA09872192BE0300306134 /* AppDelegate.swift in Sources */,

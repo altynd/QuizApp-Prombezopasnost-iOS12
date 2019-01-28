@@ -84,46 +84,64 @@ class ViewController: UIViewController {
             // задаем текст вопроса
             voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
             
-            var button:UIButton = UIButton()
+            
+            
             //количество ответов в вопросе
             vsegoOtvetov = otvetiArray[nomerVoprosa - 1].count
             
-            //цикл для ответов
+            //цикл для прогрузки ответов
             for i in 1...vsegoOtvetov{
                 // задаем текст ответов в кнопки
+                var button:UIButton = UIButton()
                 button = view.viewWithTag(i) as! UIButton
                 button.setTitle(otvetiArray[nomerVoprosa - 1][i - 1], for: .normal)
                 
                 //выключаем пустые кнопки
-                if otvetiArray[nomerVoprosa - 1][i - 1] == ""{
-                    button.isHidden = true // TODO: сделать отключение кнопки вместо черного
-                }
-                else{
-                    button.isHidden = false
-                }
+                viklucharmKnopki(i: i, btn: button)
                 
-                //задаем цвета кнопок
-                if vibraniyOtvetArray[nomerVoprosa] > 0 {
-                    button.isEnabled = false
-                    button.setTitleColor(UIColor.gray, for: .normal)
-                    voprosTextOutlet.textColor = UIColor.gray
-                }
-                else{
-                    button.isEnabled = true
-                    button.setTitleColor(UIColor.blue, for: .normal)
-                    voprosTextOutlet.textColor = UIColor.black
-                    //if i == vibraniyOtvetArray[nomerVoprosa]{
-                    //button.backgroundColor = UIColor.black
-                }
+                //задаем цвета кнопок для выбранных ответов
+                cvetKnopki(btn: button)
                 
-                //черный цвет для выбранного ответа
-                if button.tag == vibraniyOtvetArray[nomerVoprosa]{
-                    button.setTitleColor(UIColor.black, for: .normal)
-                }
+                //ответ черным текстом
+                cherniyAnswer(btn: button)
+                
             }
         }
     }
     
+    //функция кнопки черного ответа
+    func cherniyAnswer(btn:UIButton){
+        if btn.tag == vibraniyOtvetArray[nomerVoprosa]{
+            btn.setTitleColor(UIColor.black, for: .normal)
+        }
+    }
+    
+    
+    //функция выключаем пустые кнопки
+    func viklucharmKnopki (i: Int, btn:UIButton){
+        if otvetiArray[nomerVoprosa - 1][i - 1] == ""{
+            btn.isHidden = true
+        }
+        else{
+            btn.isHidden = false
+        }
+    }
+    
+    //функция покраски кнопок для выбранных ответов
+    func cvetKnopki (btn:UIButton){
+        if vibraniyOtvetArray[nomerVoprosa] > 0 {
+            btn.isEnabled = false
+            btn.setTitleColor(UIColor.gray, for: .normal)
+            voprosTextOutlet.textColor = UIColor.gray
+        }
+        else{
+            btn.isEnabled = true
+            btn.setTitleColor(UIColor.blue, for: .normal)
+            voprosTextOutlet.textColor = UIColor.black
+        }
+    }
+    
+    //функция включения следующиего вопроса
     func sledushiyVopros(){
         if nomerVoprosa < vsegoVoprosov{
             nomerVoprosa += 1
@@ -131,6 +149,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //функция включения предыдущего вопроса
     func predidushiyVopros(){
         if nomerVoprosa > 1{
             nomerVoprosa -= 1

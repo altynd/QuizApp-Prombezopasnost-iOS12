@@ -14,4 +14,4 @@ let voprosiArray = ["Favorite color?", "Favorite pet?", "Whoes your Daddy?"]
 // ответы
 let otvetiArray = [["1red", "2green", "3blue", "4orange","5yellow",],["1dog", "2cat", "3bird", "4chikken",""],["1", "2", "3","",""]]
 
-let pravelniyOtvetIndexArray = [2,2,3]
+let pravelniyOtvetIndexArray = [1,2,3]

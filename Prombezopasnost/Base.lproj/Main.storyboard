@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prombezopasnost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryBoard1" id="BYZ-38-t0r" customClass="ViewController" customModule="Prombezopasnost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cax-Lt-I5d">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-AD-8gu">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-AD-8gu">
                                         <rect key="frame" x="0.0" y="0.0" width="118.5" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iD3-Hm-bfv" userLabel="height = 30"/>
@@ -32,10 +32,10 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="nazad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sw8-KO-Ht7"/>
+                                            <action selector="nazadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sw8-KO-Ht7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-wS-uid">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-wS-uid">
                                         <rect key="frame" x="128.5" y="0.0" width="118" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3ur-pQ-xWQ" userLabel="height = 30"/>
@@ -46,10 +46,10 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="menu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2p-7w-sQj"/>
+                                            <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2p-7w-sQj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-IS-Fpf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-IS-Fpf">
                                         <rect key="frame" x="256.5" y="0.0" width="118.5" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="IEu-XG-3as" userLabel="height = 30"/>
@@ -60,7 +60,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="vpered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYO-28-8TK"/>
+                                            <action selector="vperedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYO-28-8TK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -99,21 +99,21 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="viborKurs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cje-q9-t4s"/>
+                                    <action selector="viborKursButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cje-q9-t4s"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-2P-NoC">
-                                <rect key="frame" x="0.0" y="76" width="375" height="541"/>
+                                <rect key="frame" x="0.0" y="71" width="375" height="546"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-uP-nrm" userLabel="voprosText">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                         <string key="text">Уполномочены ли иные федеральные органы исполнительной власти, помимо Федеральной службы по экологическому, технологическому и атомному надзору, осуществлять специальные разрешительные, контрольные или надзорные функции в области промышленной безопасности?</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-bX-ZdO" userLabel="A">
-                                        <rect key="frame" x="0.0" y="154.5" width="375" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="156" width="375" height="78"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,11 +122,11 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6b-UH-Mzp"/>
+                                            <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6b-UH-Mzp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-Ja-eVN" userLabel="B">
-                                        <rect key="frame" x="0.0" y="232" width="375" height="77"/>
+                                        <rect key="frame" x="0.0" y="234" width="375" height="78"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,11 +135,11 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52i-D0-Cki"/>
+                                            <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52i-D0-Cki"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-jx-fUx" userLabel="V">
-                                        <rect key="frame" x="0.0" y="309" width="375" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="312" width="375" height="78"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,11 +148,11 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ED-Aq-kOI"/>
+                                            <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ED-Aq-kOI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-vK-v5q" userLabel="G">
-                                        <rect key="frame" x="0.0" y="386.5" width="375" height="77"/>
+                                        <rect key="frame" x="0.0" y="390" width="375" height="78"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,11 +161,11 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNC-0J-RLE"/>
+                                            <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNC-0J-RLE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-yu-ycl" userLabel="D">
-                                        <rect key="frame" x="0.0" y="463.5" width="375" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="468" width="375" height="78"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,7 +174,7 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="otvetKnopki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wY2-TX-RDP"/>
+                                            <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wY2-TX-RDP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -187,31 +187,31 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Yv-tf3" userLabel="voprosNomer">
-                                <rect key="frame" x="259" y="51" width="100" height="25"/>
+                                <rect key="frame" x="259" y="51" width="100" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Fql-Mk-VNN"/>
+                                    <constraint firstAttribute="height" constant="20" id="Fql-Mk-VNN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mbf-Vc-kqc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="10/10">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="viborVopros:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsE-2E-5s0"/>
+                                    <action selector="viborVoprosButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsE-2E-5s0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42R-3Q-yos" userLabel="biletNomer">
-                                <rect key="frame" x="16" y="51" width="100" height="25"/>
+                                <rect key="frame" x="16" y="51" width="100" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="1TK-3N-XFU"/>
+                                    <constraint firstAttribute="height" constant="20" id="1TK-3N-XFU"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lpP-aN-7Cj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Билет №10">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="viborBilet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qm4-oC-8Br"/>
+                                    <action selector="viborBiletButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qm4-oC-8Br"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,20 +244,36 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="biletNomer" destination="42R-3Q-yos" id="ZIG-Hb-hvy"/>
-                        <outlet property="kursNomer" destination="bkR-0E-KFp" id="zeI-8U-FdH"/>
-                        <outlet property="voprosNomer" destination="Mna-Yv-tf3" id="NZY-gv-qrY"/>
-                        <outlet property="voprosText" destination="iPD-uP-nrm" id="vwf-TP-2GU"/>
-                        <outletCollection property="otvetText" destination="ayX-bX-ZdO" collectionClass="NSMutableArray" id="ehu-jp-qCL"/>
-                        <outletCollection property="otvetText" destination="7EB-Ja-eVN" collectionClass="NSMutableArray" id="Vz2-jg-egb"/>
-                        <outletCollection property="otvetText" destination="jqv-jx-fUx" collectionClass="NSMutableArray" id="Xf8-Kl-BO5"/>
-                        <outletCollection property="otvetText" destination="YFJ-vK-v5q" collectionClass="NSMutableArray" id="fN4-x1-r5P"/>
-                        <outletCollection property="otvetText" destination="o7c-yu-ycl" collectionClass="NSMutableArray" id="hJN-mt-GQX"/>
+                        <outlet property="biletNomerOutlet" destination="42R-3Q-yos" id="ZIG-Hb-hvy"/>
+                        <outlet property="kursNomerOutlet" destination="bkR-0E-KFp" id="zeI-8U-FdH"/>
+                        <outlet property="voprosNomerOutlet" destination="Mna-Yv-tf3" id="NZY-gv-qrY"/>
+                        <outlet property="voprosTextOutlet" destination="iPD-uP-nrm" id="vwf-TP-2GU"/>
+                        <outletCollection property="otvetTextOutletArray" destination="ayX-bX-ZdO" collectionClass="NSMutableArray" id="ehu-jp-qCL"/>
+                        <outletCollection property="otvetTextOutletArray" destination="7EB-Ja-eVN" collectionClass="NSMutableArray" id="Vz2-jg-egb"/>
+                        <outletCollection property="otvetTextOutletArray" destination="jqv-jx-fUx" collectionClass="NSMutableArray" id="Xf8-Kl-BO5"/>
+                        <outletCollection property="otvetTextOutletArray" destination="YFJ-vK-v5q" collectionClass="NSMutableArray" id="fN4-x1-r5P"/>
+                        <outletCollection property="otvetTextOutletArray" destination="o7c-yu-ycl" collectionClass="NSMutableArray" id="hJN-mt-GQX"/>
+                        <segue destination="aO7-VT-E4L" kind="presentation" identifier="perekluchatelEkrana" id="9Ed-Yz-cB6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="49.275362318840585" y="22.826086956521742"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="wyq-29-Wej">
+            <objects>
+                <viewController storyboardIdentifier="StoryBoard2" id="aO7-VT-E4L" customClass="SecondViewController" customModule="Prombezopasnost" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3jx-7C-YKi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e4Q-dC-Kfu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLe-f4-ReU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="-133"/>
         </scene>
     </scenes>
 </document>

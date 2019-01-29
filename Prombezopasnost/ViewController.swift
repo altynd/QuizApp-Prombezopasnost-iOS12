@@ -35,14 +35,7 @@ class ViewController: UIViewController {
     @IBAction func viborVoprosButton(_ sender: UIButton) {
     }
     @IBAction func otvetKnopkiButton(_ sender: UIButton) {
-        
-        //print("Выбранный ответ \(vibraniyOtvet [nomerVoprosa])")
-        
-        //if sender.tag == praviniyOtvet{
-        //print("Правильный ответ")
-        //} else{
-        //print("Не правильный ответ")
-        //}
+
         vibraniyOtvetArray [nomerVoprosa] = sender.tag
         otobragenie()
         sledushiyVopros()
@@ -58,6 +51,12 @@ class ViewController: UIViewController {
     @IBAction func vperedButton(_ sender: UIButton) {
         sledushiyVopros()
     }
+    
+    //задаем режим работы
+    var rejimObuchenie = 0
+    var rejimTrenirovka = 0
+    var rejimEkzamen = 0
+    
     
     // задаем значения для первого вопроса
     var kol_voPravilnihOtvetov = 0

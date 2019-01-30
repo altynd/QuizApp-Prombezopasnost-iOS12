@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         vibraniyOtvetArray [nomerVoprosa] = sender.tag
         otobragenie()
         sledushiyVopros()
+   //     konecVoprosov()
         
     }
     @IBAction func nazadButton(_ sender: UIButton) {
@@ -115,12 +116,12 @@ class ViewController: UIViewController {
     //функция покраски кнопок для выбранных ответов
     func cvetKnopki (btn:UIButton){
         if vibraniyOtvetArray[nomerVoprosa] > 0 {
-            btn.isEnabled = false
+            btn.isUserInteractionEnabled = false
             btn.setTitleColor(UIColor.gray, for: .normal)
             voprosTextOutlet.textColor = UIColor.gray
         }
         else{
-            btn.isEnabled = true
+            btn.isUserInteractionEnabled = true
             btn.setTitleColor(UIColor.blue, for: .normal)
             voprosTextOutlet.textColor = UIColor.black
         }
@@ -171,6 +172,40 @@ class ViewController: UIViewController {
         let biletNomerText = "Билет №\(biletNomer)"
         return biletNomerText
     }
+    
+//    func konecVoprosov(){
+//        var num = 1
+//        for i in 0...vsegoVoprosov - 1{
+//            num = num * vibraniyOtvetArray[i] * vibraniyOtvetArray[i + 1]
+//            if num == 0{
+//                print("продолжаем")
+//            }
+//            else{
+//                print("следующий экран")
+//            }
+//        }
+//        print(vibraniyOtvetArray[nomerVoprosa])
+//
+    
+//    }
+
+/*
+     enum AppStoryboard : String {
+     case Main = "Main"
+     case PreLogin = "PreLogin"
+     case Timeline = "Timeline"
+     var instance : UIStoryboard {
+     return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+     }
+     }
+     // USAGE :
+     
+     let storyboard = AppStoryboard.Main.instance
+     
+     // Old Way
+     ﻿
+     let storyboard = UIStoryboard(name: “Main”, bundle: Bundle.main)
+ */
     
 }
 

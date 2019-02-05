@@ -8,14 +8,18 @@
 
 import UIKit
 
-class SecondViewController: ViewController {
-
+class SecondViewController: UIViewController/*ViewController*/ {
+    
+    let vc = ViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//rezultati.text = "Правильных ответов \(praviniyOtvet)/\(vsegoVoprosov)"
-        // Do any additional setup after loading the view.
+                rezultati.text = "Правильных ответов: \(vc.points) из \(vc.vsegoVoprosov)"
+        print(vc.points)
     }
-
+    
     @IBOutlet weak var rezultati: UILabel!
+    
+    
     
 }

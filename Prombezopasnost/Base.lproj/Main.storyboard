@@ -348,7 +348,7 @@
                         <outletCollection property="otvetTextOutletArray" destination="jqv-jx-fUx" collectionClass="NSMutableArray" id="Xf8-Kl-BO5"/>
                         <outletCollection property="otvetTextOutletArray" destination="YFJ-vK-v5q" collectionClass="NSMutableArray" id="fN4-x1-r5P"/>
                         <outletCollection property="otvetTextOutletArray" destination="o7c-yu-ycl" collectionClass="NSMutableArray" id="hJN-mt-GQX"/>
-                        <segue destination="aO7-VT-E4L" kind="presentation" identifier="SegueTest" id="SLQ-O4-b7g"/>
+                        <segue destination="aO7-VT-E4L" kind="presentation" identifier="SegueResult" id="SLQ-O4-b7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -373,11 +373,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="laD-K8-BAv">
+                                <rect key="frame" x="0.0" y="738" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-UM-aRy">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="24r-1f-UEE"/>
+                                            <constraint firstAttribute="height" constant="40" id="R5Y-uO-Trj" userLabel="height = 30"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Назад">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nazadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBL-K3-dcu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-9m-73i">
+                                        <rect key="frame" x="128.33333333333334" y="0.0" width="118.33333333333334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3MK-v5-hFe" userLabel="height = 30"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="a5v-V9-PWG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Меню">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ise-Wf-V6Z"/>
+                                            <segue destination="MPr-6c-Xbx" kind="presentation" id="Rre-50-Yjn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-Uv-eiW">
+                                        <rect key="frame" x="256.66666666666669" y="0.0" width="118.33333333333331" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="gdU-qu-4nw"/>
+                                            <constraint firstAttribute="height" constant="40" id="izc-VF-Aht" userLabel="height = 30"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Вперед">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="vperedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zaM-Sd-J8O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WxW-L1-vWH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wts-Pv-NvU"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="laD-K8-BAv" firstAttribute="leading" secondItem="e4Q-dC-Kfu" secondAttribute="leading" id="2Xt-yA-YyM"/>
+                            <constraint firstItem="e4Q-dC-Kfu" firstAttribute="trailing" secondItem="laD-K8-BAv" secondAttribute="trailing" id="8t8-Xr-UnH"/>
                             <constraint firstItem="OqQ-5t-KiD" firstAttribute="centerY" secondItem="3jx-7C-YKi" secondAttribute="centerY" id="MnO-9G-bJ7"/>
                             <constraint firstItem="OqQ-5t-KiD" firstAttribute="centerX" secondItem="3jx-7C-YKi" secondAttribute="centerX" id="mQp-cG-TMY"/>
+                            <constraint firstItem="laD-K8-BAv" firstAttribute="bottom" secondItem="e4Q-dC-Kfu" secondAttribute="bottom" id="sCU-P6-gEl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e4Q-dC-Kfu"/>
                     </view>
@@ -391,6 +446,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YNp-uD-Mkn"/>
+        <segue reference="HJC-oO-jpI"/>
+        <segue reference="yWe-fE-GYA"/>
     </inferredMetricsTieBreakers>
 </document>

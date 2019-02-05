@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var biletNomerOutlet: UIButton!
     @IBOutlet weak var voprosNomerOutlet: UIButton!
     @IBOutlet weak var voprosTextOutlet: UILabel!
-    
     @IBOutlet var otvetTextOutletArray: [UIButton]!
     
     @IBAction func viborKursButton(_ sender: UIButton) {
@@ -35,11 +34,15 @@ class ViewController: UIViewController {
     @IBAction func viborVoprosButton(_ sender: UIButton) {
     }
     @IBAction func otvetKnopkiButton(_ sender: UIButton) {
-
+        
         vibraniyOtvetArray [nomerVoprosa] = sender.tag
-        otobragenie()
+        if sender.tag == praviniyOtvet {
+            points += 1
+        }
+print("vibraniy otvet = \(sender.tag)")
+print(points)
         sledushiyVopros()
-   //     konecVoprosov()
+        konecVoprosov()
         
     }
     @IBAction func nazadButton(_ sender: UIButton) {
@@ -47,31 +50,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func menuButton(_ sender: UIButton) {
+        restart()
     }
     
     @IBAction func vperedButton(_ sender: UIButton) {
         sledushiyVopros()
     }
     
-    //задаем режим работы
-    var rejimObuchenie = 0
-    var rejimTrenirovka = 0
-    var rejimEkzamen = 0
-    
-    
-    // задаем значения для первого вопроса
-    var kol_voPravilnihOtvetov = 0
-    var kol_voNePravilnihOtvetov = 0
     var nomerVoprosa = 1
     let vsegoVoprosov = voprosiArray.count
     var vsegoOtvetov = 0
     var praviniyOtvet = pravelniyOtvetIndexArray[0]
-    
+    var points = 0
     
     // функция показывает верные ответы
     func otobragenie(){
-        
- //       print("Номер вопроса \(nomerVoprosa)")
         
         if nomerVoprosa >= 1 && nomerVoprosa <= vsegoVoprosov{
             
@@ -80,6 +73,8 @@ class ViewController: UIViewController {
             
             //задаем правильный ответ
             praviniyOtvet = pravelniyOtvetIndexArray[nomerVoprosa - 1]
+print("nomerVoprosa \(nomerVoprosa)")
+print("praviniyOtvet \(praviniyOtvet)")
             
             // задаем текст вопроса
             voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
@@ -103,7 +98,7 @@ class ViewController: UIViewController {
                 cherniyAnswer(btn: button)
                 
                 //выключаем пустые кнопки
-                viklucharmKnopki(i: i, btn: button)
+                vikluchaemKnopki(i: i, btn: button)
                 
             }
         }
@@ -135,7 +130,7 @@ class ViewController: UIViewController {
     }
     
     //функция выключаем пустые кнопки
-    func viklucharmKnopki (i: Int, btn:UIButton){
+    func vikluchaemKnopki (i: Int, btn:UIButton){
         if otvetiArray[nomerVoprosa - 1][i - 1] == ""{
             btn.isEnabled = false
         }
@@ -173,39 +168,46 @@ class ViewController: UIViewController {
         return biletNomerText
     }
     
-//    func konecVoprosov(){
-//        var num = 1
-//        for i in 0...vsegoVoprosov - 1{
-//            num = num * vibraniyOtvetArray[i] * vibraniyOtvetArray[i + 1]
-//            if num == 0{
-//                print("продолжаем")
-//            }
-//            else{
-//                print("следующий экран")
-//            }
-//        }
-//        print(vibraniyOtvetArray[nomerVoprosa])
-//
+    func restart(){
+        vibraniyOtvetArray = [0,0,0,0,0,0]
+    }
     
-//    }
-
-/*
-     enum AppStoryboard : String {
-     case Main = "Main"
-     case PreLogin = "PreLogin"
-     case Timeline = "Timeline"
-     var instance : UIStoryboard {
-     return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
-     }
-     }
-     // USAGE :
-     
-     let storyboard = AppStoryboard.Main.instance
-     
-     // Old Way
-     ﻿
-     let storyboard = UIStoryboard(name: “Main”, bundle: Bundle.main)
- */
+    func konecVoprosov(){
+        var num1 = 1
+        var num2 = 1
+        for i in 1...(vsegoVoprosov){
+            num1 = num1 * vibraniyOtvetArray[i]
+            num2 = num1 * num2
+        }
+        
+        if num2 != 0{
+            //print("ok")
+            self.performSegue(withIdentifier: "SegueResult", sender: self)
+            
+        }
+    }
+    
+    func otvechenoVoprosov() -> Int{
+        return vibraniyOtvetArray.filter({ $0 != 0 }).count - 1
+    }
+    
     
 }
+/*
+ enum AppStoryboard : String {
+ case Main = "Main"
+ case PreLogin = "PreLogin"
+ case Timeline = "Timeline"
+ var instance : UIStoryboard {
+ return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+ }
+ }
+ // USAGE :
+ 
+ let storyboard = AppStoryboard.Main.instance
+ 
+ // Old Way
+ ﻿
+ let storyboard = UIStoryboard(name: “Main”, bundle: Bundle.main)
+ */
 

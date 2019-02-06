@@ -10,11 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController/*ViewController*/ {
     
+    var points: Int?
+    var vsegoVoprosov : Int?
+    
     let vc = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                rezultati.text = "Правильных ответов: \(vc.points) из \(vc.vsegoVoprosov)"
+                rezultati.text = "Правильных ответов: \(points ?? 0) из \(vsegoVoprosov ?? 0)"
     }
     
     @IBOutlet weak var rezultati: UILabel!

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         
         //задаются вопросы по функции
         otobragenie()
+        restart()
         //задается наименование курса
         kursNomerOutlet.setTitle(kursNomer(), for: .normal)
         //задается номер билета
@@ -183,6 +184,15 @@ print("praviniyOtvet \(praviniyOtvet)")
     
     func restart(){
         vibraniyOtvetArray = [0,0,0,0,0,0]
+        
+        for i in 1...vsegoOtvetov{
+            //инициализируем кнопку
+            var button:UIButton = UIButton()
+            button = view.viewWithTag(i) as! UIButton
+        button.isUserInteractionEnabled = true
+        button.setTitleColor(UIColor.blue, for: .normal)
+        voprosTextOutlet.textColor = UIColor.black
+        }
     }
     
     func konecVoprosov(){
@@ -195,10 +205,21 @@ print("praviniyOtvet \(praviniyOtvet)")
         
         if num2 != 0{
             //print("ok")
-            self.performSegue(withIdentifier: "SegueResult", sender: self)
+            self.performSegue(withIdentifier: "SegueResult", sender: Any?.self)
             
         }
     }
+    
+    //передает информацию segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "SegueResult"){
+            let displayVC = segue.destination as! SecondViewController
+            
+            displayVC.points = points
+            displayVC.vsegoVoprosov = vsegoVoprosov
+        }
+    }
+    
     
     func otvechenoVoprosov() -> Int{
         return vibraniyOtvetArray.filter({ $0 != 0 }).count - 1
@@ -212,21 +233,5 @@ print("praviniyOtvet \(praviniyOtvet)")
         return points
     }
 }
-/*
- enum AppStoryboard : String {
- case Main = "Main"
- case PreLogin = "PreLogin"
- case Timeline = "Timeline"
- var instance : UIStoryboard {
- return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
- }
- }
- // USAGE :
- 
- let storyboard = AppStoryboard.Main.instance
- 
- // Old Way
- ﻿
- let storyboard = UIStoryboard(name: “Main”, bundle: Bundle.main)
- */
+
 

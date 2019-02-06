@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         
         vibraniyOtvetArray [nomerVoprosa] = sender.tag
         points = otvetPlusOne(NomerVoprosa: nomerVoprosa)
-print("vibraniyOyvet \(vibraniyOtvetArray[nomerVoprosa])")
-print("points \(points) \n")
+        print("vibraniyOyvet \(vibraniyOtvetArray[nomerVoprosa])")
+        print("points \(points) \n")
         sledushiyVopros()
         konecVoprosov()
         
@@ -70,12 +70,10 @@ print("points \(points) \n")
             
             //задаем правильный ответ в вопросе
             praviniyOtvet = pravelniyOtvetIndexArray[nomerVoprosa - 1]
-
-print("nomerVoprosa \(nomerVoprosa)")
-print("praviniyOtvet \(praviniyOtvet)")
             
-//            points = otvetPlusOne(NomerVoprosa: nomerVoprosa)
-//print("points \(points)")
+            print("nomerVoprosa \(nomerVoprosa)")
+            print("praviniyOtvet \(praviniyOtvet)")
+
             
             // задаем текст вопроса  в кнопки
             voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
@@ -102,8 +100,8 @@ print("praviniyOtvet \(praviniyOtvet)")
                 vikluchaemKnopki(i: i, btn: button)
                 
                 //показывает правильный вариант
-//                zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
-
+                //zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
+                
             }
         }
     }
@@ -189,9 +187,9 @@ print("praviniyOtvet \(praviniyOtvet)")
             //инициализируем кнопку
             var button:UIButton = UIButton()
             button = view.viewWithTag(i) as! UIButton
-        button.isUserInteractionEnabled = true
-        button.setTitleColor(UIColor.blue, for: .normal)
-        voprosTextOutlet.textColor = UIColor.black
+            button.isUserInteractionEnabled = true
+            button.setTitleColor(UIColor.blue, for: .normal)
+            voprosTextOutlet.textColor = UIColor.black
         }
     }
     

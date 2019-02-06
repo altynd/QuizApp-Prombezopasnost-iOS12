@@ -36,11 +36,8 @@ class ViewController: UIViewController {
     @IBAction func otvetKnopkiButton(_ sender: UIButton) {
         
         vibraniyOtvetArray [nomerVoprosa] = sender.tag
-        if sender.tag == praviniyOtvet {
-            points += 1
-        }
-print("vibraniy otvet = \(sender.tag)")
-print(points)
+        otvetPlusOne(NomerVoprosa: nomerVoprosa)
+ //       print(points)
         sledushiyVopros()
         konecVoprosov()
         
@@ -56,6 +53,7 @@ print(points)
     @IBAction func vperedButton(_ sender: UIButton) {
         sledushiyVopros()
     }
+    
     
     var nomerVoprosa = 1
     let vsegoVoprosov = voprosiArray.count
@@ -191,7 +189,12 @@ print("praviniyOtvet \(praviniyOtvet)")
         return vibraniyOtvetArray.filter({ $0 != 0 }).count - 1
     }
     
-    
+    func otvetPlusOne(NomerVoprosa:Int) {
+        
+        if vibraniyOtvetArray [nomerVoprosa] == praviniyOtvet {
+            points += 1
+        }
+    }
 }
 /*
  enum AppStoryboard : String {

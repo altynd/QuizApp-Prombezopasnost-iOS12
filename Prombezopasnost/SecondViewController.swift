@@ -15,7 +15,6 @@ class SecondViewController: UIViewController/*ViewController*/ {
     override func viewDidLoad() {
         super.viewDidLoad()
                 rezultati.text = "Правильных ответов: \(vc.points) из \(vc.vsegoVoprosov)"
-        print(vc.points)
     }
     
     @IBOutlet weak var rezultati: UILabel!

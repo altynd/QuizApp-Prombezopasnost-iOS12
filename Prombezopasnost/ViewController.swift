@@ -36,8 +36,9 @@ class ViewController: UIViewController {
     @IBAction func otvetKnopkiButton(_ sender: UIButton) {
         
         vibraniyOtvetArray [nomerVoprosa] = sender.tag
-        otvetPlusOne(NomerVoprosa: nomerVoprosa)
- //       print(points)
+        points = otvetPlusOne(NomerVoprosa: nomerVoprosa)
+print("vibraniyOyvet \(vibraniyOtvetArray[nomerVoprosa])")
+print("points \(points) \n")
         sledushiyVopros()
         konecVoprosov()
         
@@ -45,15 +46,12 @@ class ViewController: UIViewController {
     @IBAction func nazadButton(_ sender: UIButton) {
         predidushiyVopros()
     }
-    
     @IBAction func menuButton(_ sender: UIButton) {
         restart()
     }
-    
     @IBAction func vperedButton(_ sender: UIButton) {
         sledushiyVopros()
     }
-    
     
     var nomerVoprosa = 1
     let vsegoVoprosov = voprosiArray.count
@@ -69,12 +67,16 @@ class ViewController: UIViewController {
             //индикация номера вопроса
             voprosNomerOutlet.setTitle("Вопрос №\(nomerVoprosa)/\(vsegoVoprosov)", for: .normal)
             
-            //задаем правильный ответ
+            //задаем правильный ответ в вопросе
             praviniyOtvet = pravelniyOtvetIndexArray[nomerVoprosa - 1]
+
 print("nomerVoprosa \(nomerVoprosa)")
 print("praviniyOtvet \(praviniyOtvet)")
             
-            // задаем текст вопроса
+//            points = otvetPlusOne(NomerVoprosa: nomerVoprosa)
+//print("points \(points)")
+            
+            // задаем текст вопроса  в кнопки
             voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
             
             //количество ответов в вопросе
@@ -98,6 +100,9 @@ print("praviniyOtvet \(praviniyOtvet)")
                 //выключаем пустые кнопки
                 vikluchaemKnopki(i: i, btn: button)
                 
+                //показывает правильный вариант
+//                zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
+
             }
         }
     }
@@ -112,6 +117,7 @@ print("praviniyOtvet \(praviniyOtvet)")
             btn.isUserInteractionEnabled = false
             btn.setTitleColor(UIColor.gray, for: .normal)
             voprosTextOutlet.textColor = UIColor.gray
+            
         }
         else{
             btn.isUserInteractionEnabled = true
@@ -124,6 +130,15 @@ print("praviniyOtvet \(praviniyOtvet)")
     func cherniyAnswer(btn:UIButton){
         if btn.tag == vibraniyOtvetArray[nomerVoprosa]{
             btn.setTitleColor(UIColor.black, for: .normal)
+        }
+    }
+    
+    //функция зеленого правильного ответа
+    func zeleniyAnswer(btn:UIButton, nomerVoprosa : Int){
+        if btn.tag == pravelniyOtvetIndexArray[nomerVoprosa]{
+            btn.backgroundColor = UIColor.green
+        }else{
+            btn.backgroundColor = UIColor.clear
         }
     }
     
@@ -189,11 +204,12 @@ print("praviniyOtvet \(praviniyOtvet)")
         return vibraniyOtvetArray.filter({ $0 != 0 }).count - 1
     }
     
-    func otvetPlusOne(NomerVoprosa:Int) {
+    func otvetPlusOne(NomerVoprosa:Int) -> Int {
         
         if vibraniyOtvetArray [nomerVoprosa] == praviniyOtvet {
             points += 1
         }
+        return points
     }
 }
 /*

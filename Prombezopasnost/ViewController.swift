@@ -195,6 +195,7 @@ class ViewController: UIViewController {
             //инициализируем кнопку
             var button:UIButton = UIButton()
             button = view.viewWithTag(i) as! UIButton
+            
             button.isUserInteractionEnabled = true
             button.setTitleColor(UIColor.blue, for: .normal)
             voprosTextOutlet.textColor = UIColor.black

@@ -358,16 +358,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов 3/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqQ-5t-KiD">
-                                <rect key="frame" x="90" y="395.66666666666669" width="195" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="2Uc-Dg-laC"/>
-                                    <constraint firstAttribute="height" constant="21" id="Lek-Oz-3ak"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="laD-K8-BAv">
                                 <rect key="frame" x="0.0" y="738" width="375" height="40"/>
                                 <subviews>
@@ -420,6 +410,16 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wts-Pv-NvU"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов 3/3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqQ-5t-KiD">
+                                <rect key="frame" x="62.666666666666657" y="330.66666666666669" width="249.99999999999997" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2Uc-Dg-laC"/>
+                                    <constraint firstAttribute="height" constant="151" id="Lek-Oz-3ak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -437,11 +437,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLe-f4-ReU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="-696"/>
+            <point key="canvasLocation" x="1220" y="-696.05911330049264"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gS9-3B-qjG"/>
-        <segue reference="yWe-fE-GYA"/>
+        <segue reference="Rre-50-Yjn"/>
     </inferredMetricsTieBreakers>
 </document>

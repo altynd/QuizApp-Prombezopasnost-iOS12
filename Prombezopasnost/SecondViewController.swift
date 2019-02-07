@@ -13,7 +13,7 @@ class SecondViewController: UIViewController/*ViewController*/ {
     var points: Int?
     var vsegoVoprosov : Int?
     
-    let vc = ViewController()
+   // let vc = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

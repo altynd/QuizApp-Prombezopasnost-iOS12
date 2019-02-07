@@ -20,7 +20,12 @@ class ViewController: UIViewController {
         kursNomerOutlet.setTitle(kursNomer(), for: .normal)
         //задается номер билета
         biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
+ 
     }
+    
+ 
+    
+    @IBOutlet weak var progressBarLabel: UILabel!
     
     @IBOutlet weak var kursNomerOutlet: UIButton!
     @IBOutlet weak var biletNomerOutlet: UIButton!
@@ -63,6 +68,12 @@ class ViewController: UIViewController {
     // функция показывает верные ответы
     func otobragenie(){
         
+        //!! Не работает
+
+        let width = view.frame.size.width / CGFloat(vsegoVoprosov) * CGFloat(nomerVoprosa-1)
+        progressBarLabel.frame.size.width = width
+
+        
         if nomerVoprosa >= 1 && nomerVoprosa <= vsegoVoprosov{
             
             //индикация номера вопроса
@@ -73,7 +84,6 @@ class ViewController: UIViewController {
             
             print("nomerVoprosa \(nomerVoprosa)")
             print("praviniyOtvet \(praviniyOtvet)")
-
             
             // задаем текст вопроса  в кнопки
             voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
@@ -103,6 +113,7 @@ class ViewController: UIViewController {
                 //zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
                 
             }
+
         }
     }
     

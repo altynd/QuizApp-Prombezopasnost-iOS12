@@ -163,26 +163,24 @@
                                     <constraint firstAttribute="height" constant="40" id="bnA-WJ-PkA"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtB-Ff-wV6" userLabel="Полоска">
-                                <rect key="frame" x="0.0" y="65" width="375" height="10"/>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tqs-i1-ss4">
+                                <rect key="frame" x="0.0" y="65" width="10" height="10"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="10" placeholderIntrinsicHeight="10" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-74-rs4" userLabel="Шкала">
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                        <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="XIV-yY-Kpm"/>
+                                    <constraint firstItem="jEB-74-rs4" firstAttribute="top" secondItem="tqs-i1-ss4" secondAttribute="top" id="flE-cm-nXy"/>
+                                    <constraint firstItem="jEB-74-rs4" firstAttribute="leading" secondItem="tqs-i1-ss4" secondAttribute="leading" id="sKx-pc-u3q"/>
+                                    <constraint firstAttribute="bottom" secondItem="jEB-74-rs4" secondAttribute="bottom" id="w5S-OU-r83"/>
                                 </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-74-rs4" userLabel="Шкала">
-                                <rect key="frame" x="0.0" y="65" width="4.666666666666667" height="10"/>
-                                <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="KIr-Ir-Uy2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-0E-KFp" userLabel="kursNomer">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -313,27 +311,23 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mna-Yv-tf3" secondAttribute="trailing" constant="16" id="1Rt-fj-6gi"/>
-                            <constraint firstItem="YtB-Ff-wV6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EjP-IP-Ndm"/>
                             <constraint firstItem="42R-3Q-yos" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FTl-Y3-2kV"/>
                             <constraint firstItem="Cax-Lt-I5d" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Iq9-bK-uZ5"/>
-                            <constraint firstItem="YtB-Ff-wV6" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" id="L1M-Vu-TUb"/>
                             <constraint firstAttribute="trailing" secondItem="gwe-2P-NoC" secondAttribute="trailing" id="Ld3-xe-25O"/>
+                            <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="tqs-i1-ss4" secondAttribute="bottom" constant="20" id="RRQ-Ct-HIl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cax-Lt-I5d" secondAttribute="trailing" id="RUq-g4-cqU"/>
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="Mna-Yv-tf3" secondAttribute="bottom" id="Rbl-3l-iS3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jEB-74-rs4" secondAttribute="trailing" symbolic="YES" id="YYZ-9y-J9L"/>
                             <constraint firstItem="Mna-Yv-tf3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="42R-3Q-yos" secondAttribute="trailing" constant="8" symbolic="YES" id="Zel-kE-y9J"/>
-                            <constraint firstItem="jEB-74-rs4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fJc-5H-rGp"/>
                             <constraint firstItem="42R-3Q-yos" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" constant="10" id="gce-Fb-Ff0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gwe-2P-NoC" secondAttribute="bottom" constant="70" id="gq5-Uc-rcw"/>
                             <constraint firstItem="bkR-0E-KFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mAO-ya-Ebr"/>
                             <constraint firstItem="bkR-0E-KFp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="nav-cR-1QT"/>
-                            <constraint firstItem="YtB-Ff-wV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oJt-Sz-FG5"/>
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" constant="67" id="p4n-ka-2MQ"/>
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="42R-3Q-yos" secondAttribute="bottom" id="sI8-Eh-hkW"/>
                             <constraint firstItem="Cax-Lt-I5d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJD-51-xXK"/>
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uT0-rL-Tht"/>
-                            <constraint firstItem="jEB-74-rs4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="w0d-iK-wW8"/>
                             <constraint firstItem="Mna-Yv-tf3" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" constant="10" id="wrO-Gz-43L"/>
+                            <constraint firstItem="tqs-i1-ss4" firstAttribute="leading" secondItem="bkR-0E-KFp" secondAttribute="leading" id="yaF-fx-2KO"/>
                             <constraint firstItem="bkR-0E-KFp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ylV-bQ-j2t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -341,6 +335,7 @@
                     <connections>
                         <outlet property="biletNomerOutlet" destination="42R-3Q-yos" id="ZIG-Hb-hvy"/>
                         <outlet property="kursNomerOutlet" destination="bkR-0E-KFp" id="zeI-8U-FdH"/>
+                        <outlet property="progressBarLabel" destination="jEB-74-rs4" id="fXs-oT-nXF"/>
                         <outlet property="voprosNomerOutlet" destination="Mna-Yv-tf3" id="NZY-gv-qrY"/>
                         <outlet property="voprosTextOutlet" destination="iPD-uP-nrm" id="vwf-TP-2GU"/>
                         <outletCollection property="otvetTextOutletArray" destination="ayX-bX-ZdO" collectionClass="NSMutableArray" id="ehu-jp-qCL"/>
@@ -446,7 +441,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HJC-oO-jpI"/>
+        <segue reference="gS9-3B-qjG"/>
         <segue reference="yWe-fE-GYA"/>
     </inferredMetricsTieBreakers>
 </document>

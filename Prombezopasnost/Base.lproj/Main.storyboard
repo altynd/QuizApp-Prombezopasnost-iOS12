@@ -164,10 +164,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tqs-i1-ss4">
-                                <rect key="frame" x="0.0" y="65" width="10" height="10"/>
+                                <rect key="frame" x="0.0" y="65" width="1" height="10"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="10" placeholderIntrinsicHeight="10" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-74-rs4" userLabel="Шкала">
-                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="10" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-74-rs4" userLabel="Шкала">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="10"/>
                                         <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -442,6 +442,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gS9-3B-qjG"/>
-        <segue reference="Rre-50-Yjn"/>
+        <segue reference="yWe-fE-GYA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -67,12 +67,10 @@ class ViewController: UIViewController {
     
     // функция показывает верные ответы
     func otobragenie(){
-        
-        //!! Не работает
-
-        let width = view.frame.size.width / CGFloat(vsegoVoprosov) * CGFloat(nomerVoprosa-1)
+        let otvechenoVoprosov = otvechenoVoprosovFunc()
+        //прогрес
+        let width = view.frame.size.width / CGFloat(vsegoVoprosov) * CGFloat(otvechenoVoprosov+1)
         progressBarLabel.frame.size.width = width
-
         
         if nomerVoprosa >= 1 && nomerVoprosa <= vsegoVoprosov{
             
@@ -111,9 +109,7 @@ class ViewController: UIViewController {
                 
                 //показывает правильный вариант
                 //zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
-                
             }
-
         }
     }
     
@@ -121,6 +117,7 @@ class ViewController: UIViewController {
     func textOtvetov(i:Int, btn:UIButton){
         btn.setTitle(otvetiArray[nomerVoprosa - 1][i - 1], for: .normal)
     }
+    
     //функция покраски кнопок для выбранных ответов
     func cvetKnopki (btn:UIButton){
         if vibraniyOtvetArray[nomerVoprosa] > 0 {
@@ -230,7 +227,7 @@ class ViewController: UIViewController {
     }
     
     
-    func otvechenoVoprosov() -> Int{
+    func otvechenoVoprosovFunc() -> Int{
         return vibraniyOtvetArray.filter({ $0 != 0 }).count - 1
     }
     

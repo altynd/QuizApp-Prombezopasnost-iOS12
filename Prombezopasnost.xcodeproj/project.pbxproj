@@ -11,17 +11,31 @@
 		F78B0DCE21FEEB8300574A19 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B0DCD21FEEB8300574A19 /* SecondViewController.swift */; };
 		F7A8DAA722006A2600DA93F5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8DAA622006A2600DA93F5 /* FirstViewController.swift */; };
 		F7BA2BBD2200800A00340C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7BA2BBC2200800A00340C4C /* LaunchScreen.storyboard */; };
+		F7F75F36220C470B002525D7 /* PrombezopasnostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F75F35220C470B002525D7 /* PrombezopasnostTests.swift */; };
 		F7FA09872192BE0300306134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA09862192BE0300306134 /* AppDelegate.swift */; };
 		F7FA09892192BE0300306134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA09882192BE0300306134 /* ViewController.swift */; };
 		F7FA098C2192BE0300306134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7FA098A2192BE0300306134 /* Main.storyboard */; };
 		F7FA098E2192BE0400306134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7FA098D2192BE0400306134 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F7F75F38220C470B002525D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7FA097B2192BE0300306134 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7FA09822192BE0300306134;
+			remoteInfo = Prombezopasnost;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F745A85521FE071200000DCF /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		F78B0DCD21FEEB8300574A19 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7A8DAA622006A2600DA93F5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F7BA2BBC2200800A00340C4C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7F75F33220C470B002525D7 /* PrombezopasnostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrombezopasnostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7F75F35220C470B002525D7 /* PrombezopasnostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrombezopasnostTests.swift; sourceTree = "<group>"; };
+		F7F75F37220C470B002525D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7FA09832192BE0300306134 /* Prombezopasnost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prombezopasnost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FA09862192BE0300306134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FA09882192BE0300306134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F7F75F30220C470B002525D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7FA09802192BE0300306134 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7F75F34220C470B002525D7 /* PrombezopasnostTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7F75F35220C470B002525D7 /* PrombezopasnostTests.swift */,
+				F7F75F37220C470B002525D7 /* Info.plist */,
+			);
+			path = PrombezopasnostTests;
+			sourceTree = "<group>";
+		};
 		F7FA097A2192BE0300306134 = {
 			isa = PBXGroup;
 			children = (
 				F7FA09852192BE0300306134 /* Prombezopasnost */,
+				F7F75F34220C470B002525D7 /* PrombezopasnostTests */,
 				F7FA09842192BE0300306134 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				F7FA09832192BE0300306134 /* Prombezopasnost.app */,
+				F7F75F33220C470B002525D7 /* PrombezopasnostTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,9 +94,9 @@
 			children = (
 				F7FA09862192BE0300306134 /* AppDelegate.swift */,
 				F7A8DAA622006A2600DA93F5 /* FirstViewController.swift */,
-				F745A85521FE071200000DCF /* Questions.swift */,
 				F7FA09882192BE0300306134 /* ViewController.swift */,
 				F78B0DCD21FEEB8300574A19 /* SecondViewController.swift */,
+				F745A85521FE071200000DCF /* Questions.swift */,
 				F7FA098A2192BE0300306134 /* Main.storyboard */,
 				F7FA098D2192BE0400306134 /* Assets.xcassets */,
 				F7BA2BBC2200800A00340C4C /* LaunchScreen.storyboard */,
@@ -76,6 +108,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F7F75F32220C470B002525D7 /* PrombezopasnostTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7F75F3C220C470B002525D7 /* Build configuration list for PBXNativeTarget "PrombezopasnostTests" */;
+			buildPhases = (
+				F7F75F2F220C470B002525D7 /* Sources */,
+				F7F75F30220C470B002525D7 /* Frameworks */,
+				F7F75F31220C470B002525D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7F75F39220C470B002525D7 /* PBXTargetDependency */,
+			);
+			name = PrombezopasnostTests;
+			productName = PrombezopasnostTests;
+			productReference = F7F75F33220C470B002525D7 /* PrombezopasnostTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F7FA09822192BE0300306134 /* Prombezopasnost */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7FA09952192BE0400306134 /* Build configuration list for PBXNativeTarget "Prombezopasnost" */;
@@ -103,6 +153,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Altyn Dmitry";
 				TargetAttributes = {
+					F7F75F32220C470B002525D7 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F7FA09822192BE0300306134;
+					};
 					F7FA09822192BE0300306134 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -122,11 +176,19 @@
 			projectRoot = "";
 			targets = (
 				F7FA09822192BE0300306134 /* Prombezopasnost */,
+				F7F75F32220C470B002525D7 /* PrombezopasnostTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F7F75F31220C470B002525D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7FA09812192BE0300306134 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +202,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F7F75F2F220C470B002525D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F75F36220C470B002525D7 /* PrombezopasnostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7FA097F2192BE0300306134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +224,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F7F75F39220C470B002525D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7FA09822192BE0300306134 /* Prombezopasnost */;
+			targetProxy = F7F75F38220C470B002525D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F7FA098A2192BE0300306134 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -166,6 +244,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F7F75F3A220C470B002525D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3MV699ZLH;
+				INFOPLIST_FILE = PrombezopasnostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.altynd.PrombezopasnostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prombezopasnost.app/Prombezopasnost";
+			};
+			name = Debug;
+		};
+		F7F75F3B220C470B002525D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3MV699ZLH;
+				INFOPLIST_FILE = PrombezopasnostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.altynd.PrombezopasnostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prombezopasnost.app/Prombezopasnost";
+			};
+			name = Release;
+		};
 		F7FA09932192BE0400306134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +439,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F7F75F3C220C470B002525D7 /* Build configuration list for PBXNativeTarget "PrombezopasnostTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7F75F3A220C470B002525D7 /* Debug */,
+				F7F75F3B220C470B002525D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F7FA097E2192BE0300306134 /* Build configuration list for PBXProject "Prombezopasnost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

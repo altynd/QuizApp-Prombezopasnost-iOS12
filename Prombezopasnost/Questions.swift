@@ -21,3 +21,7 @@ let pravelniyOtvetIndexArray = [3,2,1,2,3]
 
 var vibraniyOtvetArray = [0,0,0,0,0,0] //
 //TODO: создать динмаичекий массив, подгрузку ячеек на 1 больше чем вопросов
+
+//struct Questions {
+//    let question
+//}

@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+  //      print(questionsArray[0].question)
+        
+        questionsRightAnswersAppend()
+        
         //задаются вопросы по функции
         otobragenie()
         restart()
@@ -58,11 +62,15 @@ class ViewController: UIViewController {
     @IBAction func vperedButton(_ sender: UIButton) {
         sledushiyVopros()
     }
+
+    var answersArray = [""]
+    var rightAnswersArray = [0]
+    var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsArray.count + 1))
     
     var nomerVoprosa = 1
-    let vsegoVoprosov = voprosiArray.count
+    let vsegoVoprosov = questionsArray.count
     var vsegoOtvetov = 0
-    var praviniyOtvet = pravelniyOtvetIndexArray[0]
+    var rightAnswer = 0
     var points = 0
     
     // функция показывает верные ответы
@@ -78,13 +86,13 @@ class ViewController: UIViewController {
             voprosNomerOutlet.setTitle("Вопрос №\(nomerVoprosa)/\(vsegoVoprosov)", for: .normal)
             
             //задаем правильный ответ в вопросе
-            praviniyOtvet = pravelniyOtvetIndexArray[nomerVoprosa - 1]
+            rightAnswer = rightAnswersArray[nomerVoprosa]
             
             print("nomerVoprosa \(nomerVoprosa)")
-            print("praviniyOtvet \(praviniyOtvet)")
+            print("rightAnswer \(rightAnswer)")
             
             // задаем текст вопроса  в кнопки
-            voprosTextOutlet.text = voprosiArray[nomerVoprosa - 1]
+            voprosTextOutlet.text = answersArray[nomerVoprosa]
             
             //количество ответов в вопросе
             vsegoOtvetov = otvetiArray[nomerVoprosa - 1].count
@@ -142,7 +150,7 @@ class ViewController: UIViewController {
     
     //функция зеленого правильного ответа
     func zeleniyAnswer(btn:UIButton, nomerVoprosa : Int){
-        if btn.tag == pravelniyOtvetIndexArray[nomerVoprosa]{
+        if btn.tag == rightAnswersArray[nomerVoprosa]{
             btn.backgroundColor = UIColor.green
         }else{
             btn.backgroundColor = UIColor.clear
@@ -234,11 +242,22 @@ class ViewController: UIViewController {
     
     func otvetPlusOne(NomerVoprosa:Int) -> Int {
         
-        if vibraniyOtvetArray [nomerVoprosa] == praviniyOtvet {
+        if vibraniyOtvetArray [nomerVoprosa] == rightAnswer {
             points += 1
         }
         return points
     }
+    
+    //массив вопросов
+    //массив правильных ответов
+    func questionsRightAnswersAppend() {
+        for i in questionsArray {
+            answersArray.append(i.question)
+            rightAnswersArray.append(i.rightAnswer)
+        }
+        
+    }
+    
 }
 
 

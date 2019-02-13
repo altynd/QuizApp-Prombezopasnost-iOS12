@@ -27,7 +27,7 @@ class SecondViewController: UIViewController/*ViewController*/ {
         vsegoVoprosov = vsegoVoprosov ?? 0
         if points! > 0 && points == vsegoVoprosov{
            return("\nОтличный результат.\nЭкзамен пройден.")
-        } else if points! >= vsegoVoprosov! - 1{
+        } else if points! > 0 && points == (vsegoVoprosov! - 1){
             return("\nХороший результат.\nЭкзамен пройден.")
         }else{
             return("\n\nЭкзамен не пройден.")

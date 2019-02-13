@@ -99,6 +99,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IWd-PL-4nk"/>
                     </view>
+                    <connections>
+                        <outlet property="Obuchenie" destination="JZM-Dp-ajI" id="0Fb-eB-cxY"/>
+                        <outlet property="Trenirovka" destination="Ryy-PF-FSP" id="Vin-s2-gk1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSW-ar-1yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

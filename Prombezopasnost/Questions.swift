@@ -14,7 +14,7 @@ var answersArray = [String]()
 var answersArrayArray = [[String]]()
 var rightAnswersArray = [0]
 
-var questionsStructArray : [QuestionsA1] = [question1, question2, question3, question4, question5]
+var questionsStructArray : [QuestionsA1] = [question1,question2,question3,question4,question5]
 
 // ответы
 
@@ -46,9 +46,10 @@ struct QuestionsA1 {
         self.answer5=answer5
         self.rightAnswer=rightAnswer
     self.answersArray=[self.answer1,self.answer2,self.answer3,self.answer4,self.answer5]
+
+        
     }
 }
-
 
 //Сюда добавляем вопросы с ответами
 var question1 = QuestionsA1(
@@ -59,6 +60,7 @@ var question1 = QuestionsA1(
     answer4: "ответ 1.4",
     answer5: "ответ 1.5",
     rightAnswer: 1)
+
 
 var question2 = QuestionsA1(
     question: "вопрос 2?",
@@ -96,6 +98,9 @@ let question5 = QuestionsA1(
     answer5: "",
     rightAnswer: 1)
 
+func ff(question : QuestionsA1){
+    questionsStructArray.append(question)
+}
 
 //let question = QuestionsA1(
 //    question: "",

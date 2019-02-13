@@ -41,9 +41,9 @@ class ViewController: UIViewController {
     }
     @IBAction func otvetKnopkiButton(_ sender: UIButton) {
         
-        vibraniyOtvetArray [nomerVoprosa] = sender.tag
-        points = otvetPlusOne(NomerVoprosa: nomerVoprosa)
-        print("vibraniyOyvet \(vibraniyOtvetArray[nomerVoprosa])")
+        vibraniyOtvetArray [currentQuestion] = sender.tag
+        points = otvetPlusOne(NomerVoprosa: currentQuestion)
+        print("vibraniyOyvet \(vibraniyOtvetArray[currentQuestion])")
         print("points \(points) \n")
         sledushiyVopros()
         konecVoprosov()
@@ -63,9 +63,9 @@ class ViewController: UIViewController {
 //    var rightAnswersArray = [0]
     var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
     
-    var nomerVoprosa = 1
-    let vsegoVoprosov = questionsStructArray.count
-    var vsegoOtvetov = 0
+    var currentQuestion = 1
+    let countOfAllQuestions = questionsStructArray.count
+    var numberOfAnswersInQuestion = 0
     var rightAnswer = 0
     var points = 0
     
@@ -73,28 +73,28 @@ class ViewController: UIViewController {
     func otobragenie(){
         let otvechenoVoprosov = otvechenoVoprosovFunc()
         //прогрес
-        let width = view.frame.size.width / CGFloat(vsegoVoprosov) * CGFloat(otvechenoVoprosov+1)
+        let width = view.frame.size.width / CGFloat(countOfAllQuestions) * CGFloat(otvechenoVoprosov+1)
         progressBarLabel.frame.size.width = width
         
-        if nomerVoprosa >= 1 && nomerVoprosa <= vsegoVoprosov{
+        if currentQuestion >= 1 && currentQuestion <= countOfAllQuestions{
             
             //индикация номера вопроса
-            voprosNomerOutlet.setTitle("Вопрос №\(nomerVoprosa)/\(vsegoVoprosov)", for: .normal)
+            voprosNomerOutlet.setTitle("Вопрос №\(currentQuestion)/\(countOfAllQuestions)", for: .normal)
             
             //задаем правильный ответ в вопросе
-            rightAnswer = rightAnswersArray[nomerVoprosa]
+            rightAnswer = rightAnswersArray[currentQuestion]
             
-            print("nomerVoprosa \(nomerVoprosa)")
+            print("nomerVoprosa \(currentQuestion)")
             print("rightAnswer \(rightAnswer)")
             
             // задаем текст вопроса  в кнопки
-            voprosTextOutlet.text = questionsArray[nomerVoprosa]
+            voprosTextOutlet.text = questionsArray[currentQuestion]
             
             //количество ответов в вопросе
-            vsegoOtvetov = answersArrayArray[nomerVoprosa-1].count
+            numberOfAnswersInQuestion = answersArrayArray[currentQuestion-1].count
             
             //цикл для прогрузки ответов
-            for i in 1...vsegoOtvetov{
+            for i in 1...numberOfAnswersInQuestion{
                 //инициализируем кнопку
                 var button:UIButton = UIButton()
                 button = view.viewWithTag(i) as! UIButton
@@ -119,12 +119,12 @@ class ViewController: UIViewController {
     
     //функция прогрузки ответов в кнопки
     func textOtvetov(i:Int, btn:UIButton){
-        btn.setTitle(answersArrayArray[nomerVoprosa - 1][i - 1], for: .normal)
+        btn.setTitle(answersArrayArray[currentQuestion - 1][i - 1], for: .normal)
     }
     
     //функция покраски кнопок для выбранных ответов
     func cvetKnopki (btn:UIButton){
-        if vibraniyOtvetArray[nomerVoprosa] > 0 {
+        if vibraniyOtvetArray[currentQuestion] > 0 {
             btn.isUserInteractionEnabled = false
             btn.setTitleColor(UIColor.gray, for: .normal)
             voprosTextOutlet.textColor = UIColor.gray
@@ -139,7 +139,7 @@ class ViewController: UIViewController {
     
     //функция кнопки черного ответа
     func cherniyAnswer(btn:UIButton){
-        if btn.tag == vibraniyOtvetArray[nomerVoprosa]{
+        if btn.tag == vibraniyOtvetArray[currentQuestion]{
             btn.setTitleColor(UIColor.black, for: .normal)
         }
     }
@@ -155,7 +155,7 @@ class ViewController: UIViewController {
     
     //функция выключаем пустые кнопки
     func vikluchaemKnopki (i: Int, btn:UIButton){
-        if answersArrayArray[nomerVoprosa - 1][i - 1] == ""{
+        if answersArrayArray[currentQuestion - 1][i - 1] == ""{
             btn.isEnabled = false
         }
         else{
@@ -165,16 +165,18 @@ class ViewController: UIViewController {
     
     //функция включения следующиего вопроса
     func sledushiyVopros(){
-        if nomerVoprosa < vsegoVoprosov{
-            nomerVoprosa += 1
+        if currentQuestion < countOfAllQuestions{
+            currentQuestion += 1
+            otobragenie()
+        } else if currentQuestion == countOfAllQuestions{
             otobragenie()
         }
     }
     
     //функция включения предыдущего вопроса
     func predidushiyVopros(){
-        if nomerVoprosa > 1{
-            nomerVoprosa -= 1
+        if currentQuestion > 1{
+            currentQuestion -= 1
             otobragenie()
         }
     }
@@ -193,9 +195,9 @@ class ViewController: UIViewController {
     }
     
     func restart(){
-        vibraniyOtvetArray = [0,0,0,0,0,0]
+        vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
         
-        for i in 1...vsegoOtvetov{
+        for i in 1...numberOfAnswersInQuestion{
             //инициализируем кнопку
             var button:UIButton = UIButton()
             button = view.viewWithTag(i) as! UIButton
@@ -209,7 +211,7 @@ class ViewController: UIViewController {
     func konecVoprosov(){
         var num1 = 1
         var num2 = 1
-        for i in 1...(vsegoVoprosov){
+        for i in 1...(countOfAllQuestions){
             num1 = num1 * vibraniyOtvetArray[i]
             num2 = num1 * num2
         }
@@ -227,7 +229,7 @@ class ViewController: UIViewController {
             let displayVC = segue.destination as! SecondViewController
             
             displayVC.points = points
-            displayVC.vsegoVoprosov = vsegoVoprosov
+            displayVC.vsegoVoprosov = countOfAllQuestions
         }
     }
     
@@ -238,14 +240,14 @@ class ViewController: UIViewController {
     
     func otvetPlusOne(NomerVoprosa:Int) -> Int {
         
-        if vibraniyOtvetArray [nomerVoprosa] == rightAnswer {
+        if vibraniyOtvetArray [currentQuestion] == rightAnswer {
             points += 1
         }
         return points
     }
     
-    //массив вопросов
-    //массив правильных ответов
+    //массив базы вопросов
+    //массив базы правильных ответов
     func questionsRightAnswersAppend() {
         for i in questionsStructArray {
             questionsArray.append(i.question!)

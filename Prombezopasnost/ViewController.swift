@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-  //      print(questionsArray[0].question)
-        
         questionsRightAnswersAppend()
         
         //задаются вопросы по функции
@@ -26,8 +24,6 @@ class ViewController: UIViewController {
         biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
  
     }
-    
- 
     
     @IBOutlet weak var progressBarLabel: UILabel!
     
@@ -63,12 +59,12 @@ class ViewController: UIViewController {
         sledushiyVopros()
     }
 
-    var answersArray = [""]
-    var rightAnswersArray = [0]
-    var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsArray.count + 1))
+//    var answersArray = [""]
+//    var rightAnswersArray = [0]
+    var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
     
     var nomerVoprosa = 1
-    let vsegoVoprosov = questionsArray.count
+    let vsegoVoprosov = questionsStructArray.count
     var vsegoOtvetov = 0
     var rightAnswer = 0
     var points = 0
@@ -92,10 +88,10 @@ class ViewController: UIViewController {
             print("rightAnswer \(rightAnswer)")
             
             // задаем текст вопроса  в кнопки
-            voprosTextOutlet.text = answersArray[nomerVoprosa]
+            voprosTextOutlet.text = questionsArray[nomerVoprosa]
             
             //количество ответов в вопросе
-            vsegoOtvetov = otvetiArray[nomerVoprosa - 1].count
+            vsegoOtvetov = answersArrayArray[nomerVoprosa-1].count
             
             //цикл для прогрузки ответов
             for i in 1...vsegoOtvetov{
@@ -123,7 +119,7 @@ class ViewController: UIViewController {
     
     //функция прогрузки ответов в кнопки
     func textOtvetov(i:Int, btn:UIButton){
-        btn.setTitle(otvetiArray[nomerVoprosa - 1][i - 1], for: .normal)
+        btn.setTitle(answersArrayArray[nomerVoprosa - 1][i - 1], for: .normal)
     }
     
     //функция покраски кнопок для выбранных ответов
@@ -159,7 +155,7 @@ class ViewController: UIViewController {
     
     //функция выключаем пустые кнопки
     func vikluchaemKnopki (i: Int, btn:UIButton){
-        if otvetiArray[nomerVoprosa - 1][i - 1] == ""{
+        if answersArrayArray[nomerVoprosa - 1][i - 1] == ""{
             btn.isEnabled = false
         }
         else{
@@ -251,11 +247,12 @@ class ViewController: UIViewController {
     //массив вопросов
     //массив правильных ответов
     func questionsRightAnswersAppend() {
-        for i in questionsArray {
-            answersArray.append(i.question)
+        for i in questionsStructArray {
+            questionsArray.append(i.question)
             rightAnswersArray.append(i.rightAnswer)
+            answersArrayArray.append(i.answersArray)
         }
-        
+    
     }
     
 }

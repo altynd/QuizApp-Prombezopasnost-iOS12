@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MPr-6c-Xbx">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="StoryBoard1" id="MPr-6c-Xbx" customClass="FirstViewController" customModule="Prombezopasnost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="38f-Q9-YVv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ioz-hZ-9n7" userLabel="Полоска">
-                                <rect key="frame" x="0.0" y="65" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="0.0"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="WiD-hU-8Sy"/>
@@ -29,7 +29,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="AiH-nX-Q5s" userLabel="kursNomer">
-                                <rect key="frame" x="0.0" y="-24" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="-24" width="320" height="65"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Iit-x9-k7y"/>
@@ -40,16 +40,16 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2N-58-nwW">
-                                <rect key="frame" x="0.0" y="43" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="43" width="320" height="230"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfK-Zk-YEY">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="137" id="XsX-oF-APk"/>
                                         </constraints>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Основы промышленной безопасности" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="HFP-cf-1HA">
-                                        <rect key="frame" x="8" y="145" width="398" height="77"/>
+                                        <rect key="frame" x="8" y="145" width="304" height="77"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlz-nm-H5C">
-                                <rect key="frame" x="107" y="293" width="200" height="256"/>
+                                <rect key="frame" x="60" y="293" width="200" height="256"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="rgh-g1-DA8">
                                         <rect key="frame" x="45" y="8" width="109" height="228"/>
@@ -149,14 +149,14 @@
             <objects>
                 <viewController storyboardIdentifier="StoryBoard2c" id="BYZ-38-t0r" customClass="ViewController" customModule="Prombezopasnost" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cax-Lt-I5d">
-                                <rect key="frame" x="0.0" y="696" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-AD-8gu">
-                                        <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iD3-Hm-bfv" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="vE9-Dd-Xrk"/>
@@ -170,7 +170,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-wS-uid">
-                                        <rect key="frame" x="141.33333333333331" y="0.0" width="131.33333333333331" height="40"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3ur-pQ-xWQ" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="VW2-kg-rVc"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-IS-Fpf">
-                                        <rect key="frame" x="282.66666666666669" y="0.0" width="131.33333333333331" height="40"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="IEu-XG-3as" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="QI3-uj-h84"/>
@@ -222,7 +222,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-0E-KFp" userLabel="kursNomer">
-                                <rect key="frame" x="0.0" y="-24" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="-24" width="320" height="65"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Ghg-3d-CvZ"/>
@@ -236,17 +236,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-2P-NoC">
-                                <rect key="frame" x="0.0" y="71" width="414" height="595"/>
+                                <rect key="frame" x="0.0" y="71" width="320" height="427"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-uP-nrm" userLabel="voprosText">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-uP-nrm" userLabel="voprosText">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
                                         <string key="text">Уполномочены ли иные федеральные органы исполнительной власти, помимо Федеральной службы по экологическому, технологическому и атомному надзору, осуществлять специальные разрешительные, контрольные или надзорные функции в области промышленной безопасности?</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-bX-ZdO" userLabel="A">
-                                        <rect key="frame" x="0.0" y="170" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="122" width="320" height="61"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,12 +254,15 @@
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6b-UH-Mzp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-Ja-eVN" userLabel="B">
-                                        <rect key="frame" x="0.0" y="255" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="183" width="320" height="61"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,12 +270,15 @@
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52i-D0-Cki"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-jx-fUx" userLabel="V">
-                                        <rect key="frame" x="0.0" y="340" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="244" width="320" height="61"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -280,12 +286,15 @@
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ED-Aq-kOI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-vK-v5q" userLabel="G">
-                                        <rect key="frame" x="0.0" y="425" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="305" width="320" height="61"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,12 +302,15 @@
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNC-0J-RLE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-yu-ycl" userLabel="D">
-                                        <rect key="frame" x="0.0" y="510" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="366" width="320" height="61"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -306,6 +318,9 @@
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wY2-TX-RDP"/>
                                         </connections>
@@ -320,7 +335,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-Yv-tf3" userLabel="voprosNomer">
-                                <rect key="frame" x="298" y="51" width="100" height="20"/>
+                                <rect key="frame" x="204" y="51" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Fql-Mk-VNN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mbf-Vc-kqc"/>
@@ -395,14 +410,14 @@
             <objects>
                 <viewController storyboardIdentifier="StoryBoard3" id="aO7-VT-E4L" customClass="SecondViewController" customModule="Prombezopasnost" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3jx-7C-YKi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="laD-K8-BAv">
-                                <rect key="frame" x="0.0" y="696" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-UM-aRy">
-                                        <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="24r-1f-UEE"/>
                                             <constraint firstAttribute="height" constant="40" id="R5Y-uO-Trj" userLabel="height = 30"/>
@@ -416,7 +431,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-9m-73i">
-                                        <rect key="frame" x="141.33333333333331" y="0.0" width="131.33333333333331" height="40"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3MK-v5-hFe" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="a5v-V9-PWG"/>
@@ -431,7 +446,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-Uv-eiW">
-                                        <rect key="frame" x="282.66666666666669" y="0.0" width="131.33333333333331" height="40"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="gdU-qu-4nw"/>
                                             <constraint firstAttribute="height" constant="40" id="izc-VF-Aht" userLabel="height = 30"/>
@@ -451,7 +466,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов 3/3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqQ-5t-KiD">
-                                <rect key="frame" x="82" y="292.66666666666669" width="250" height="151"/>
+                                <rect key="frame" x="35" y="208.5" width="250" height="151"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2Uc-Dg-laC"/>
                                     <constraint firstAttribute="height" constant="151" id="Lek-Oz-3ak"/>

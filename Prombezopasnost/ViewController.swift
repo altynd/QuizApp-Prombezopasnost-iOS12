@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         points = otvetPlusOne(NomerVoprosa: currentQuestion)
         print("vibraniyOyvet \(vibraniyOtvetArray[currentQuestion])")
         print("points \(points) \n")
+//        otobragenie()
         sledushiyVopros()
         konecVoprosov()
         

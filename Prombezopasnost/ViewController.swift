@@ -251,9 +251,9 @@ class ViewController: UIViewController {
     //массив базы правильных ответов
     func questionsRightAnswersAppend() {
         for i in questionsStructArray {
-            questionsArray.append(i.question!)
+            questionsArray.append(i.question)
             rightAnswersArray.append(i.rightAnswer!)
-            answersArrayArray.append(i.answersArray as! [String])
+            answersArrayArray.append(i.answersArray as? [String] ?? [""])
         }
     
     }

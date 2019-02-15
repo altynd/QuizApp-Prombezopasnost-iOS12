@@ -14,28 +14,28 @@ var answersArray = [String]()
 var answersArrayArray = [[String]]()
 var rightAnswersArray = [0]
 
-var questionsStructArray : [QuestionsA1] = [question1,question2,question3,question4,question5]
-
 // ответы
 
 struct QuestionsA1 {
-    var question : String?
-    var answer1 : String?
-    var answer2 : String?
-    var answer3 : String?
-    var answer4 : String?
-    var answer5 : String?
+    var question : String
+    var answer1 : String
+    var answer2 : String
+    var answer3 : String
+    var answer4 : String
+    var answer5 : String
     var rightAnswer : Int?
     var answersArray : [String?]
+    var i : String?
     
-    init(question:String? = nil,
-         answer1 : String? = nil,
-         answer2 : String? = nil,
-         answer3 : String? = nil,
-         answer4 : String? = nil,
-         answer5 : String? = nil,
+    init(question:String = "",
+         answer1 : String = "",
+         answer2 : String = "",
+         answer3 : String = "",
+         answer4 : String = "",
+         answer5 : String? = "",
          rightAnswer : Int? = nil,
-         answersArray : [String?] = [nil])
+         answersArray : [String?] = [nil],
+         i : String? = nil)
         
     {
         self.question=question
@@ -43,71 +43,51 @@ struct QuestionsA1 {
         self.answer2=answer2
         self.answer3=answer3
         self.answer4=answer4
-        self.answer5=answer5
+        self.answer5=answer5!
         self.rightAnswer=rightAnswer
+        self.i = i
     self.answersArray=[self.answer1,self.answer2,self.answer3,self.answer4,self.answer5]
 
         
     }
 }
 
+var questionsStructArray : [QuestionsA1] = [
+    question1,
+    question2,
+    question3,
+//    question4,
+//    question5
+]
+
 //Сюда добавляем вопросы с ответами
-var question1 = QuestionsA1(
-    question: "вопрос 1?",
-    answer1: "ответ 1.1",
-    answer2: "ответ 1.2",
-    answer3: "ответ 1.3",
-    answer4: "ответ 1.4",
-    answer5: "ответ 1.5",
-    rightAnswer: 1)
 
+let question1 = QuestionsA1(
+    question: "Какие нормативные документы не могут приниматься по вопросам промышленной безопасности? ",
+    answer1: "А) Федеральные законы. ",
+    answer2: "Б) Нормативные правовые акты Правительства Российской Федерации. ",
+    answer3: "В) Нормативные правовые акты Президента Российской Федерации. ",
+    answer4: "Г) Нормативные правовые акты субъектов Российской Федерации ",
+    
+    rightAnswer: 4,
+    i : "п.1 ст.4 Федерального закона от 21.07.97 N 116-ФЗ \"О промышленной безопасности опасных производственных объектов\"")
 
-var question2 = QuestionsA1(
-    question: "вопрос 2?",
-    answer1: "ответ 2.1",
-    answer2: "ответ 2.2",
-    answer3: "ответ 2.3",
-    answer4: "ответ 2.4",
-    answer5: "",
-    rightAnswer: 2)
+let question2 = QuestionsA1(
+    question: " Что является основной целью Федерального закона от 21 июля 1997 г. № 116-ФЗ «О промышленной безопасности опасных производственных объектов»? ",
+    answer1: " А) Ликвидация чрезвычайных ситуаций, возникших в результате техногенной аварии. ",
+    answer2: " Б) Снижение вероятности аварий на опасном производственном объекте и, как следствие, снижение уровня загрязнения окружающей среды при эксплуатации опасных производственных объектов. ",
+    answer3: " В) Предупреждение аварий на опасных производственных объектах и обеспечение готовности эксплуатирующих опасные производственные объекты юридических лиц и индивидуальных предпринимателей к локализации и ликвидации последствий указанных аварий. ",
+    answer4: " Г) Установление порядка расследования и учета несчастных случаев на опасном производственном объекте. ",
+    answer5: " Д) Установление порядка расследования и учета несчастных случаев на опасном производственном объекте. ",
+    rightAnswer: 3,
+    i : " абз.1 преамбулы к Федеральному закону от 21.07.97 N 116-ФЗ \"О промышленной безопасности опасных производственных объектов\"" )
 
 let question3 = QuestionsA1(
-    question: "вопрос 3?",
-    answer1: "ответ 3.1",
-    answer2: "ответ 3.2",
-    answer3: "ответ 3.3",
-    answer4: "",
-    answer5: "",
-    rightAnswer: 3)
-
-let question4 = QuestionsA1(
-    question: "вопрос 4?",
-    answer1: "ответ 4.1",
-    answer2: "ответ 4.2",
-    answer3: "",
-    answer4: "",
-    answer5: "",
-    rightAnswer: 2)
-
-let question5 = QuestionsA1(
-    question: "вопрос 5?",
-    answer1: "ответ 5.1",
-    answer2: "",
-    answer3: "",
-    answer4: "",
-    answer5: "",
-    rightAnswer: 1)
-
-func ff(question : QuestionsA1){
-    questionsStructArray.append(question)
-}
-
-//let question = QuestionsA1(
-//    question: "",
-//    answer1: "",
-//    answer2: "",
-//    answer3: "",
-//    answer4: "",
-//    answer5: "",
-//    rightAnswer: 0,
+    question: " Промышленная безопасность опасных производственных объектов в соответствии с Федеральным законом от 21 июля 1997 г. № 116-ФЗ «О промышленной безопасности опасных производственных объектов» - это: ",
+    answer1: " А) Состояние защищенности конституционного права граждан Российской Федерации на благоприятную окружающую среду посредством предупреждения негативных воздействий хозяйственной и иной деятельности на окружающую природную среду. ",
+    answer2: " Б) Система установленных законом мер, обеспечивающих состояние защищенности жизненно важных интересов личности и общества от аварий на опасных производственных объектах и последствий указанных аварий. ",
+    answer3: " В) Состояние защищенности жизненно важных интересов личности и общества от аварий на опасных производственных объектах и последствий указанных аварий. ",
+    answer4: " Г) Система установленных законом запретов, ограничений и предписаний по безопасной эксплуатации опасных производственных объектов. ",
+    rightAnswer: 3,
+    i : " абз.2 ст.1 Федерального закона от 21.07.97 N 116-ФЗ \"О промышленной безопасности опасных производственных объектов\"" )
 

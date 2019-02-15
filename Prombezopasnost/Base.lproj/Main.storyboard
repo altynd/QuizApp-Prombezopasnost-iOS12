@@ -148,10 +148,12 @@
                         <viewLayoutGuide key="safeArea" id="IWd-PL-4nk"/>
                     </view>
                     <connections>
+                        <outlet property="ExamOutlet" destination="3be-Sk-88h" id="jht-sK-xW6"/>
                         <outlet property="NameOfKursLabel" destination="HFP-cf-1HA" id="Jbq-Nz-hlG"/>
                         <outlet property="Obuchenie" destination="JZM-Dp-ajI" id="0Fb-eB-cxY"/>
                         <outlet property="Trenirovka" destination="Ryy-PF-FSP" id="Vin-s2-gk1"/>
                         <outlet property="myPickerView" destination="yfK-Zk-YEY" id="cL8-CI-fg9"/>
+                        <outlet property="nameOfKursLabel" destination="HFP-cf-1HA" id="Cvc-OX-DRf"/>
                         <outlet property="nameOfKursOutlet" destination="AiH-nX-Q5s" id="9K5-A1-eUd"/>
                     </connections>
                 </viewController>

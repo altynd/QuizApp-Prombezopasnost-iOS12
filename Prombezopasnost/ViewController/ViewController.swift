@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         otobragenie()
         restart()
         //задается наименование курса
-        kursNomerOutlet.setTitle(kursNomer(), for: .normal)
+        kursNomerOutlet.setTitle(indexOfKurses, for: .normal)
         //задается номер билета
         biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
  
@@ -60,6 +60,8 @@ class ViewController: UIViewController {
         sledushiyVopros()
     }
 
+    var indexOfKurses : String = ""
+    
     var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
     
     var currentQuestion = 1
@@ -178,12 +180,6 @@ class ViewController: UIViewController {
             currentQuestion -= 1
             otobragenie()
         }
-    }
-    
-    //функция наименоваия курса
-    func kursNomer() -> String{
-        let kursNomer = "А.1. Основы промышленной безопасности"
-        return kursNomer
     }
     
     //функция номера билета

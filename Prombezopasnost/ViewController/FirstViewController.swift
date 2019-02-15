@@ -33,6 +33,8 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBOutlet weak var Trenirovka: UIButton!
     
+    @IBOutlet weak var ExamOutlet: UIButton!
+    
     @IBOutlet weak var myPickerView: UIPickerView!
     
     let nameOfKurses : [String] = [
@@ -79,6 +81,16 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     //что отображается в пикере
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return indexOfKurses[row]
+    }
+    
+    //передает информацию segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ExamSegue"){
+            let displayVC = segue.destination as! ViewController
+            
+            displayVC.indexOfKurses = nameOfKursOutlet.title(for: .normal) ?? "Курс 0.0"
+
+        }
     }
 
 }

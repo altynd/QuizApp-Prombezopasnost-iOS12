@@ -60,8 +60,6 @@ class ViewController: UIViewController {
         sledushiyVopros()
     }
 
-//    var answersArray = [""]
-//    var rightAnswersArray = [0]
     var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
     
     var currentQuestion = 1

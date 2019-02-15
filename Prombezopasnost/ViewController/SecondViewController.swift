@@ -13,8 +13,6 @@ class SecondViewController: UIViewController/*ViewController*/ {
     var points: Int?
     var vsegoVoprosov : Int?
     
-   // let vc = ViewController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
                 rezultati.text = "Правильных ответов: \(points ?? 0) из \(vsegoVoprosov ?? 0)\n\(result())"

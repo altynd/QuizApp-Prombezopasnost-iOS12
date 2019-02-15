@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -21,7 +22,6 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         Trenirovka.isEnabled = false
         Trenirovka.setTitleColor(UIColor.gray, for: .normal)
         
-
     }
     
 
@@ -53,15 +53,14 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         "Курс Г.1.1"
         ]
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    let questionStructArrayPickArray : [[Questions]] = [
+    questionsStructArrayA_1_1,
+    questionsStructArrayB_2_4,
+    questionsStructArrayB_2_13,
+    questionsStructArrayB_2_18,
+    questionsStructArrayB_8_23,
+    questionsStructArrayG_1_1
+    ]
     
     //сколько столбцов в пикере
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -75,6 +74,7 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         nameOfKursOutlet.setTitle(indexOfKurses[row], for: .normal)
         nameOfKursLabel.text = nameOfKurses[row]
+        questionsStructArray = questionStructArrayPickArray[row]
     }
     //что отображается в пикере
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

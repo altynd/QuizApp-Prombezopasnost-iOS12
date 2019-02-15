@@ -71,12 +71,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlz-nm-H5C">
                                 <rect key="frame" x="0.0" y="293" width="375" height="256"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="rgh-g1-DA8">
-                                        <rect key="frame" x="133" y="14" width="109" height="228"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rgh-g1-DA8">
+                                        <rect key="frame" x="0.0" y="3" width="375" height="250"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-Dp-ajI">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="MA2-OM-aXj"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Обучение">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,7 +89,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryy-PF-FSP">
-                                                <rect key="frame" x="0.0" y="96" width="109" height="36"/>
+                                                <rect key="frame" x="0.0" y="90" width="375" height="70"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="O7E-lK-Srh"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Тренировка">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,7 +103,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3be-Sk-88h">
-                                                <rect key="frame" x="0.0" y="192" width="109" height="36"/>
+                                                <rect key="frame" x="0.0" y="180" width="375" height="70"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="RYT-Jb-TmE"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Экзамен">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,14 +121,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="rgh-g1-DA8" firstAttribute="centerX" secondItem="Nlz-nm-H5C" secondAttribute="centerX" id="IU9-PL-pib"/>
                                     <constraint firstAttribute="height" constant="256" id="SsA-UC-ip0"/>
+                                    <constraint firstItem="rgh-g1-DA8" firstAttribute="centerY" secondItem="Nlz-nm-H5C" secondAttribute="centerY" id="cFd-AD-ab2"/>
+                                    <constraint firstAttribute="trailing" secondItem="rgh-g1-DA8" secondAttribute="trailing" id="hHR-nh-fdP"/>
+                                    <constraint firstItem="rgh-g1-DA8" firstAttribute="leading" secondItem="Nlz-nm-H5C" secondAttribute="leading" id="qZh-tB-a5D"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ioz-hZ-9n7" firstAttribute="trailing" secondItem="IWd-PL-4nk" secondAttribute="trailing" id="3Da-lB-9dP"/>
-                            <constraint firstItem="Nlz-nm-H5C" firstAttribute="leading" secondItem="IWd-PL-4nk" secondAttribute="leading" id="3Nv-KN-Y3k"/>
                             <constraint firstItem="Ioz-hZ-9n7" firstAttribute="leading" secondItem="IWd-PL-4nk" secondAttribute="leading" id="63K-4J-mG2"/>
                             <constraint firstItem="J2N-58-nwW" firstAttribute="leading" secondItem="IWd-PL-4nk" secondAttribute="leading" id="8JP-9K-exU"/>
                             <constraint firstItem="Nlz-nm-H5C" firstAttribute="top" secondItem="J2N-58-nwW" secondAttribute="bottom" constant="20" id="HCo-nF-MA7"/>
@@ -127,7 +141,8 @@
                             <constraint firstItem="IWd-PL-4nk" firstAttribute="trailing" secondItem="AiH-nX-Q5s" secondAttribute="trailing" id="Zsb-1K-N21"/>
                             <constraint firstItem="Nlz-nm-H5C" firstAttribute="centerX" secondItem="38f-Q9-YVv" secondAttribute="centerX" id="g8E-Qg-93P"/>
                             <constraint firstItem="Ioz-hZ-9n7" firstAttribute="top" secondItem="IWd-PL-4nk" secondAttribute="top" constant="45" id="kbb-dv-lg2"/>
-                            <constraint firstItem="IWd-PL-4nk" firstAttribute="trailing" secondItem="Nlz-nm-H5C" secondAttribute="trailing" id="mGc-HH-vpF"/>
+                            <constraint firstItem="IWd-PL-4nk" firstAttribute="trailing" secondItem="Nlz-nm-H5C" secondAttribute="trailing" id="nOq-JQ-A8V"/>
+                            <constraint firstItem="Nlz-nm-H5C" firstAttribute="leading" secondItem="IWd-PL-4nk" secondAttribute="leading" id="tOR-SX-ktG"/>
                             <constraint firstItem="J2N-58-nwW" firstAttribute="top" secondItem="AiH-nX-Q5s" secondAttribute="bottom" constant="2" id="uej-lg-6jA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IWd-PL-4nk"/>
@@ -240,13 +255,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-uP-nrm" userLabel="voprosText">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
-                                        <color key="backgroundColor" white="0.94999999999999996" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.90000000000000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Уполномочены ли иные федеральные органы исполнительной власти, помимо Федеральной службы по экологическому, технологическому и атомному надзору, осуществлять специальные разрешительные, контрольные или надзорные функции в области промышленной безопасности?</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-bX-ZdO" userLabel="A">
+                                    <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-bX-ZdO" userLabel="A">
                                         <rect key="frame" x="0.0" y="151.5" width="375" height="71"/>
                                         <color key="backgroundColor" white="0.96999999999999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -262,7 +277,7 @@
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6b-UH-Mzp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-Ja-eVN" userLabel="B">
+                                    <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-Ja-eVN" userLabel="B">
                                         <rect key="frame" x="0.0" y="232.5" width="375" height="71"/>
                                         <color key="backgroundColor" white="0.97999999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -278,7 +293,7 @@
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52i-D0-Cki"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-jx-fUx" userLabel="V">
+                                    <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-jx-fUx" userLabel="V">
                                         <rect key="frame" x="0.0" y="313.5" width="375" height="71"/>
                                         <color key="backgroundColor" white="0.97999999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -294,7 +309,7 @@
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ED-Aq-kOI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-vK-v5q" userLabel="G">
+                                    <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-vK-v5q" userLabel="G">
                                         <rect key="frame" x="0.0" y="394.5" width="375" height="70.5"/>
                                         <color key="backgroundColor" white="0.97999999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -310,7 +325,7 @@
                                             <action selector="otvetKnopkiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNC-0J-RLE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-yu-ycl" userLabel="D">
+                                    <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-yu-ycl" userLabel="D">
                                         <rect key="frame" x="0.0" y="475" width="375" height="71"/>
                                         <color key="backgroundColor" white="0.96999999999999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>

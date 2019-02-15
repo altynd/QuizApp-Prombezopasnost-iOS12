@@ -76,7 +76,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-Dp-ajI">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="MA2-OM-aXj"/>
                                                 </constraints>
@@ -90,7 +90,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryy-PF-FSP">
                                                 <rect key="frame" x="0.0" y="90" width="375" height="70"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="O7E-lK-Srh"/>
                                                 </constraints>
@@ -104,7 +104,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3be-Sk-88h">
                                                 <rect key="frame" x="0.0" y="180" width="375" height="70"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="RYT-Jb-TmE"/>
                                                 </constraints>
@@ -172,6 +172,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-AD-8gu">
                                         <rect key="frame" x="0.0" y="0.0" width="118.5" height="40"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iD3-Hm-bfv" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="vE9-Dd-Xrk"/>
@@ -186,6 +187,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-wS-uid">
                                         <rect key="frame" x="128.5" y="0.0" width="118" height="40"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3ur-pQ-xWQ" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="VW2-kg-rVc"/>
@@ -201,6 +203,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-IS-Fpf">
                                         <rect key="frame" x="256.5" y="0.0" width="118.5" height="40"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="IEu-XG-3as" userLabel="height = 30"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="QI3-uj-h84"/>
@@ -250,21 +253,21 @@
                                     <action selector="viborKursButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cje-q9-t4s"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-2P-NoC">
-                                <rect key="frame" x="0.0" y="71" width="375" height="546"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-2P-NoC">
+                                <rect key="frame" x="0.0" y="71" width="375" height="556"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-uP-nrm" userLabel="voprosText">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
-                                        <color key="backgroundColor" white="0.90000000000000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Уполномочены ли иные федеральные органы исполнительной власти, помимо Федеральной службы по экологическому, технологическому и атомному надзору, осуществлять специальные разрешительные, контрольные или надзорные функции в области промышленной безопасности?</string>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-bX-ZdO" userLabel="A">
-                                        <rect key="frame" x="0.0" y="151.5" width="375" height="71"/>
+                                        <rect key="frame" x="0.0" y="101.5" width="375" height="87"/>
                                         <color key="backgroundColor" white="0.96999999999999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
@@ -278,9 +281,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-Ja-eVN" userLabel="B">
-                                        <rect key="frame" x="0.0" y="232.5" width="375" height="71"/>
+                                        <rect key="frame" x="0.0" y="193.5" width="375" height="87"/>
                                         <color key="backgroundColor" white="0.97999999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
@@ -294,9 +297,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-jx-fUx" userLabel="V">
-                                        <rect key="frame" x="0.0" y="313.5" width="375" height="71"/>
+                                        <rect key="frame" x="0.0" y="285.5" width="375" height="86.5"/>
                                         <color key="backgroundColor" white="0.97999999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
@@ -310,9 +313,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-vK-v5q" userLabel="G">
-                                        <rect key="frame" x="0.0" y="394.5" width="375" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="377" width="375" height="87"/>
                                         <color key="backgroundColor" white="0.97999999999999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
@@ -326,9 +329,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-yu-ycl" userLabel="D">
-                                        <rect key="frame" x="0.0" y="475" width="375" height="71"/>
+                                        <rect key="frame" x="0.0" y="469" width="375" height="87"/>
                                         <color key="backgroundColor" white="0.96999999999999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <string key="title">А) Требования к продукции, в том числе зданиям и сооружениям, или к продукции и связанным с требованиями к продукции процессам проектирования</string>
@@ -346,7 +349,7 @@
                                     <constraint firstItem="jqv-jx-fUx" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="36a-Va-ts5"/>
                                     <constraint firstItem="o7c-yu-ycl" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="G94-O7-CbW"/>
                                     <constraint firstItem="7EB-Ja-eVN" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="Y5R-Bd-FjA"/>
-                                    <constraint firstItem="7EB-Ja-eVN" firstAttribute="height" secondItem="iPD-uP-nrm" secondAttribute="height" multiplier="1:2" id="oQD-4F-TE4"/>
+                                    <constraint firstItem="7EB-Ja-eVN" firstAttribute="height" secondItem="iPD-uP-nrm" secondAttribute="height" multiplier="0.9" id="oQD-4F-TE4"/>
                                     <constraint firstItem="YFJ-vK-v5q" firstAttribute="height" secondItem="ayX-bX-ZdO" secondAttribute="height" id="skT-Bl-usk"/>
                                 </constraints>
                             </stackView>
@@ -390,10 +393,10 @@
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="Mna-Yv-tf3" secondAttribute="bottom" id="Rbl-3l-iS3"/>
                             <constraint firstItem="Mna-Yv-tf3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="42R-3Q-yos" secondAttribute="trailing" constant="8" symbolic="YES" id="Zel-kE-y9J"/>
                             <constraint firstItem="42R-3Q-yos" firstAttribute="top" secondItem="bkR-0E-KFp" secondAttribute="bottom" constant="10" id="gce-Fb-Ff0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gwe-2P-NoC" secondAttribute="bottom" constant="50" id="gq5-Uc-rcw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gwe-2P-NoC" secondAttribute="bottom" constant="40" id="gq5-Uc-rcw"/>
                             <constraint firstItem="bkR-0E-KFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mAO-ya-Ebr"/>
                             <constraint firstItem="bkR-0E-KFp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="nav-cR-1QT"/>
-                            <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" constant="67" id="p4n-ka-2MQ"/>
+                            <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" constant="65" id="p4n-ka-2MQ"/>
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="top" secondItem="42R-3Q-yos" secondAttribute="bottom" id="sI8-Eh-hkW"/>
                             <constraint firstItem="Cax-Lt-I5d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJD-51-xXK"/>
                             <constraint firstItem="gwe-2P-NoC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uT0-rL-Tht"/>

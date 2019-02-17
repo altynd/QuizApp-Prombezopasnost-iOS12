@@ -47,7 +47,6 @@ class ViewController: UIViewController {
         print("points \(points) \n")
 //        otobragenie()
         sledushiyVopros()
-        konecVoprosov()
         
     }
     @IBAction func nazadButton(_ sender: UIButton) {
@@ -62,7 +61,7 @@ class ViewController: UIViewController {
 
     var indexOfKurses : String = ""
     
-    var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
+    var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count))
     
     var currentQuestion = 1
     let countOfAllQuestions = questionsStructArray.count
@@ -116,6 +115,7 @@ class ViewController: UIViewController {
                 //zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
             }
         }
+        konecVoprosov(otvechenoVoprosov: otvechenoVoprosov)
     }
     
     //функция прогрузки ответов в кнопки
@@ -203,19 +203,14 @@ class ViewController: UIViewController {
         }
     }
     
-    func konecVoprosov(){
-        var num1 = 1
-        var num2 = 1
-        for i in 1...(countOfAllQuestions){
-            num1 = num1 * vibraniyOtvetArray[i]
-            num2 = num1 * num2
-        }
-        
-        if num2 != 0{
+    func konecVoprosov(otvechenoVoprosov: Int){
+ 
+        if otvechenoVoprosov == countOfAllQuestions {
             //print("ok")
             self.performSegue(withIdentifier: "SegueResult", sender: Any?.self)
-            
         }
+        print("otvechenoVoprosov \(otvechenoVoprosov)")
+        print("countOfAllQuestions \(countOfAllQuestions)")
     }
     
     //передает информацию segue
@@ -230,7 +225,7 @@ class ViewController: UIViewController {
     
     
     func otvechenoVoprosovFunc() -> Int{
-        return vibraniyOtvetArray.filter({ $0 != 0 }).count - 1
+        return vibraniyOtvetArray.filter({ $0 != 0 }).count
     }
     
     func otvetPlusOne(NomerVoprosa:Int) -> Int {

@@ -103,6 +103,7 @@ class ViewController: UIViewController {
                 
                 // задаем текст ответов в кнопки
                 textOtvetov(i: i, btn:button)
+
                 
                 //задаем цвета кнопок для выбранных ответов
                 cvetKnopki(btn: button)
@@ -122,7 +123,12 @@ class ViewController: UIViewController {
     
     //функция прогрузки ответов в кнопки
     func textOtvetov(i:Int, btn:UIButton){
+        if answersArrayArray[currentQuestion - 1][i - 1] != ""{
         btn.setTitle(answersArrayArray[currentQuestion - 1][i - 1], for: .normal)
+            btn.isHidden = false
+        }else{
+            btn.isHidden = true
+        }
     }
     
     //функция покраски кнопок для выбранных ответов

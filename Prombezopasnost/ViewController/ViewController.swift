@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         //задается наименование курса
         kursNomerOutlet.setTitle(indexOfKurses, for: .normal)
         //задается номер билета
-        biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
+        
  
     }
     
@@ -71,6 +71,8 @@ class ViewController: UIViewController {
     
     // функция показывает верные ответы
     func otobragenie(){
+        biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
+        
         let otvechenoVoprosov = otvechenoVoprosovFunc()
         //прогрес
         let width = view.frame.size.width / CGFloat(countOfAllQuestions) * CGFloat(otvechenoVoprosov+1)
@@ -184,11 +186,47 @@ class ViewController: UIViewController {
     
     //функция номера билета
     func biletNomerText() -> String{
-        let biletNomer = 1
-        let biletNomerText = "Билет №\(biletNomer)"
-        return biletNomerText
+        let biletNomerText: Int
+        switch currentQuestion {
+        case 1...10:
+            biletNomerText = 1
+        case 11...20:
+            biletNomerText = 2
+        case 21...30:
+            biletNomerText = 3
+        case 31...40:
+            biletNomerText = 4
+        case 41...50:
+            biletNomerText = 5
+        case 51...60:
+            biletNomerText = 6
+        case 61...70:
+            biletNomerText = 7
+        case 71...80:
+            biletNomerText = 8
+        case 81...90:
+            biletNomerText = 9
+        case 99...100:
+            biletNomerText = 10
+        case 101...110:
+            biletNomerText = 11
+        case 111...120:
+            biletNomerText = 12
+        case 121...130:
+            biletNomerText = 13
+        case 131...140:
+            biletNomerText = 14
+        case 141...150:
+            biletNomerText = 15
+        case 151...160:
+            biletNomerText = 16
+        default:
+            biletNomerText = 1
+        }
+        return "Билет №\(biletNomerText)"
     }
-    
+
+    //!!!!!
     func restart(){
         vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count + 1))
         
@@ -196,7 +234,7 @@ class ViewController: UIViewController {
             //инициализируем кнопку
             var button:UIButton = UIButton()
             button = view.viewWithTag(i) as! UIButton
-            
+    
             button.isUserInteractionEnabled = true
             button.setTitleColor(UIColor.blue, for: .normal)
             voprosTextOutlet.textColor = UIColor.black
@@ -204,13 +242,9 @@ class ViewController: UIViewController {
     }
     
     func konecVoprosov(otvechenoVoprosov: Int){
- 
         if otvechenoVoprosov == countOfAllQuestions {
-            //print("ok")
             self.performSegue(withIdentifier: "SegueResult", sender: Any?.self)
         }
-        print("otvechenoVoprosov \(otvechenoVoprosov)")
-        print("countOfAllQuestions \(countOfAllQuestions)")
     }
     
     //передает информацию segue
@@ -223,13 +257,11 @@ class ViewController: UIViewController {
         }
     }
     
-    
     func otvechenoVoprosovFunc() -> Int{
         return vibraniyOtvetArray.filter({ $0 != 0 }).count
     }
     
     func otvetPlusOne(NomerVoprosa:Int) -> Int {
-        
         if vibraniyOtvetArray [currentQuestion] == rightAnswer {
             points += 1
         }

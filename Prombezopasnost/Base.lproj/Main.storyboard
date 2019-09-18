@@ -98,7 +98,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="YNp-uD-Mkn"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ObuchenSegue" id="YNp-uD-Mkn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryy-PF-FSP">
@@ -112,7 +112,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="HJC-oO-jpI"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="TrenirovkaSegue" id="HJC-oO-jpI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3be-Sk-88h">
@@ -530,7 +530,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gS9-3B-qjG"/>
+        <segue reference="HJC-oO-jpI"/>
         <segue reference="yWe-fE-GYA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,8 +19,12 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
     //    Obuchenie.isEnabled = false
     //    Obuchenie.setTitleColor(UIColor.gray, for: .normal)
+        
         Trenirovka.isEnabled = false
         Trenirovka.setTitleColor(UIColor.gray, for: .normal)
+        
+    //     ExamOutlet.isEnabled = false
+    //     ExamOutlet.setTitleColor(UIColor.gray, for: .normal)
         
     }
     
@@ -36,6 +40,10 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var ExamOutlet: UIButton!
     
     @IBOutlet weak var myPickerView: UIPickerView!
+    
+    var isObuchenie = false
+    var isTrenirovka = false
+    var isExam = false
     
     let nameOfKurses : [String] = [
     "Основы промышленной безопасности",
@@ -82,14 +90,43 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return indexOfKurses[row]
     }
-    
+    /*
+    func konecVoprosov(otvechenoVoprosov: Int){
+        if otvechenoVoprosov == countOfAllQuestions {
+            self.performSegue(withIdentifier: "SegueResult", sender: Any?.self)
+        }
+    }
+    */
     //передает информацию segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ExamSegue"){
             let displayVC = segue.destination as! ViewController
             
             displayVC.indexOfKurses = nameOfKursOutlet.title(for: .normal) ?? "Курс 0.0"
+            displayVC.isObuchenie = false
+            displayVC.isTrenirovka = false
+            displayVC.isExam = true
 
+        }
+        else if(segue.identifier == "ObuchenSegue"){
+            let displayVC = segue.destination as! ViewController
+            
+            displayVC.indexOfKurses = nameOfKursOutlet.title(for: .normal) ?? "Курс 0.0"
+            
+            displayVC.isObuchenie = true
+            displayVC.isTrenirovka = false
+            displayVC.isExam = false
+            
+        }
+        else if(segue.identifier == "TrenirovkaSegue"){
+            let displayVC = segue.destination as! ViewController
+            
+            displayVC.indexOfKurses = nameOfKursOutlet.title(for: .normal) ?? "Курс 0.0"
+            
+            displayVC.isObuchenie = false
+            displayVC.isTrenirovka = true
+            displayVC.isExam = false
+            
         }
     }
 

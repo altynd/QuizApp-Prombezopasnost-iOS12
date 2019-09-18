@@ -48,6 +48,8 @@ class ViewController: UIViewController {
 //        otobragenie()
         sledushiyVopros()
         
+    
+        
     }
     @IBAction func nazadButton(_ sender: UIButton) {
         predidushiyVopros()
@@ -61,6 +63,11 @@ class ViewController: UIViewController {
 
     var indexOfKurses : String = ""
     
+    //для выбора режима обучени/экзамен/тренировка
+    var isObuchenie = false
+    var isTrenirovka = false
+    var isExam = false
+    
     var vibraniyOtvetArray = Array (repeating: 0 , count: (questionsStructArray.count))
     
     var currentQuestion = 1
@@ -68,6 +75,8 @@ class ViewController: UIViewController {
     var numberOfAnswersInQuestion = 0
     var rightAnswer = 0
     var points = 0
+    
+
     
     // функция показывает верные ответы
     func otobragenie(){
@@ -114,9 +123,10 @@ class ViewController: UIViewController {
                 //выключаем пустые кнопки
                 vikluchaemKnopki(i: i, btn: button)
                 
+                if isObuchenie{
                 //показывает правильный вариант
                 zeleniyAnswer(btn: button, nomerVoprosa: rightAnswer)
-               
+                }
             }
         }
         konecVoprosov(otvechenoVoprosov: otvechenoVoprosov)
@@ -227,6 +237,26 @@ class ViewController: UIViewController {
             biletNomerText = 15
         case 151...160:
             biletNomerText = 16
+        case 161...170:
+            biletNomerText = 17
+        case 171...180:
+            biletNomerText = 18
+        case 181...190:
+            biletNomerText = 19
+        case 191...200:
+            biletNomerText = 20
+        case 201...210:
+            biletNomerText = 21
+        case 211...220:
+            biletNomerText = 22
+        case 221...230:
+            biletNomerText = 23
+        case 231...240:
+            biletNomerText = 24
+        case 241...250:
+            biletNomerText = 25
+        case 251...260:
+            biletNomerText = 26
         default:
             biletNomerText = 1
         }

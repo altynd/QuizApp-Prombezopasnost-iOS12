@@ -5,6 +5,7 @@
 //  Created by Altyn Dmitry on 15/02/2019.
 //  Copyright © 2019 Altyn Dmitry. All rights reserved.
 //
+// Тестирование по курсу промышленной безопасности за 2019 год, последнее обновление учебного курса ПБ 115.11 было выпущено 21.01.2019 года.
 
 import Foundation
 
@@ -1468,6 +1469,7 @@ var questionsStructArrayA_1_1 : [Questions] = [
     question8A_1_1,
     question9A_1_1,
     question10A_1_1,
+      /*
     question11A_1_1,
     question12A_1_1,
     question13A_1_1,
@@ -1618,5 +1620,6 @@ var questionsStructArrayA_1_1 : [Questions] = [
     question158A_1_1,
     question159A_1_1,
     question160A_1_1,
+ */
 ]
 

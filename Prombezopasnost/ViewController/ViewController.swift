@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         
         let otvechenoVoprosov = otvechenoVoprosovFunc()
         //прогрес
-        let width = view.frame.size.width / CGFloat(countOfAllQuestions) * CGFloat(otvechenoVoprosov+1)
+        let width = (view.frame.size.width)/CGFloat(countOfAllQuestions) * CGFloat(otvechenoVoprosov)
         progressBarLabel.frame.size.width = width
         
         if currentQuestion >= 1 && currentQuestion <= countOfAllQuestions{
@@ -115,7 +115,8 @@ class ViewController: UIViewController {
                 vikluchaemKnopki(i: i, btn: button)
                 
                 //показывает правильный вариант
-                //zeleniyAnswer(btn: button, nomerVoprosa: nomerVoprosa)
+                zeleniyAnswer(btn: button, nomerVoprosa: rightAnswer)
+               
             }
         }
         konecVoprosov(otvechenoVoprosov: otvechenoVoprosov)
@@ -155,7 +156,7 @@ class ViewController: UIViewController {
     
     //функция зеленого правильного ответа
     func zeleniyAnswer(btn:UIButton, nomerVoprosa : Int){
-        if btn.tag == rightAnswersArray[nomerVoprosa]{
+        if btn.tag == rightAnswer{
             btn.backgroundColor = UIColor.green
         }else{
             btn.backgroundColor = UIColor.clear

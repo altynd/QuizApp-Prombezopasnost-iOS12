@@ -17,8 +17,8 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         myPickerView.delegate = self
         myPickerView.dataSource = self
         
-        Obuchenie.isEnabled = false
-        Obuchenie.setTitleColor(UIColor.gray, for: .normal)
+    //    Obuchenie.isEnabled = false
+    //    Obuchenie.setTitleColor(UIColor.gray, for: .normal)
         Trenirovka.isEnabled = false
         Trenirovka.setTitleColor(UIColor.gray, for: .normal)
         

@@ -83,9 +83,8 @@ class ViewController: UIViewController {
     // функция показывает верные ответы
     func otobragenie(){
         biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
-        
+        //количсетво вопросов в тесте зависит от режима
         countOfQuestions = rejim == 3 ? questionsStructArray.count : countOfQuestions
-        
         
         let otvechenoVoprosov = otvechenoVoprosovFunc()
         //прогрес

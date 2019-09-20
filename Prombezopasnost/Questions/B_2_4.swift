@@ -11,6 +11,7 @@ let question1B_2_4 = Questions(
     rightAnswer: 3,
     i : "")
 
+
 var questionsStructArrayB_2_4 : [Questions] = [
     question1B_2_4,
 //    question2B_2_4,

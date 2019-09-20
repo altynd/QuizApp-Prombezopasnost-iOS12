@@ -17,14 +17,6 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         myPickerView.delegate = self
         myPickerView.dataSource = self
         
-    //    Obuchenie.isEnabled = false
-    //    Obuchenie.setTitleColor(UIColor.gray, for: .normal)
-        
-    //    Trenirovka.isEnabled = false
-     //   Trenirovka.setTitleColor(UIColor.gray, for: .normal)
-        
-    //     ExamOutlet.isEnabled = false
-    //     ExamOutlet.setTitleColor(UIColor.gray, for: .normal)
         
     }
     
@@ -47,11 +39,17 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     let nameOfKurses : [String] = [
     "Основы промышленной безопасности",
-    "Ремонтные, монтажные и пусконаладочные работы на опасных производственных объектах нефтегазодобычи",
+ /*   "Ремонтные, монтажные и пусконаладочные работы на опасных производственных объектах нефтегазодобычи",
     "Проектирование, строительство, реконструкция и капитальный ремонт объектов нефтяной и газовой промышленности",
     "Разведка и разработка морских месторождений углеводородного сырья",
     "Эксплуатация сосудов, работающих под давлением, на опасных производственных объектах",
     "Эксплуатация электроустановок"
+ */
+        "в работе...",
+        "в работе...",
+        "в работе...",
+        "в работе...",
+        "в работе..."
     ]
     
     let indexOfKurses : [String] = [
@@ -85,6 +83,27 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         nameOfKursOutlet.setTitle(indexOfKurses[row], for: .normal)
         nameOfKursLabel.text = nameOfKurses[row]
         questionsStructArray = questionStructArrayPickArray[row]
+        // серый цвет пикера для других режимов
+        if row > 0
+        {
+            Obuchenie.isEnabled = false
+            Obuchenie.setTitleColor(UIColor.gray, for: .normal)
+            
+            Trenirovka.isEnabled = false
+            Trenirovka.setTitleColor(UIColor.gray, for: .normal)
+            
+            ExamOutlet.isEnabled = false
+            ExamOutlet.setTitleColor(UIColor.gray, for: .normal)
+        }else{
+            Obuchenie.isEnabled = true
+            Obuchenie.setTitleColor(UIColor.black, for: .normal)
+            
+            Trenirovka.isEnabled = true
+            Trenirovka.setTitleColor(UIColor.black, for: .normal)
+            
+            ExamOutlet.isEnabled = true
+            ExamOutlet.setTitleColor(UIColor.black, for: .normal)
+        }
     }
     //что отображается в пикере
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

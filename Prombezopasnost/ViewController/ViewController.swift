@@ -72,6 +72,8 @@ class ViewController: UIViewController {
     
     var currentQuestion = 1
     let countOfAllQuestions = questionsStructArray.count
+    var countOfQuestions = 10
+    var rejim = 0
     var numberOfAnswersInQuestion = 0
     var rightAnswer = 0
     var points = 0
@@ -82,15 +84,18 @@ class ViewController: UIViewController {
     func otobragenie(){
         biletNomerOutlet.setTitle(biletNomerText(), for: .normal)
         
+        countOfQuestions = rejim == 3 ? questionsStructArray.count : countOfQuestions
+        
+        
         let otvechenoVoprosov = otvechenoVoprosovFunc()
         //прогрес
-        let width = (view.frame.size.width)/CGFloat(countOfAllQuestions) * CGFloat(otvechenoVoprosov)
+        let width = (view.frame.size.width)/CGFloat(countOfQuestions) * CGFloat(otvechenoVoprosov)
         progressBarLabel.frame.size.width = width
         
-        if currentQuestion >= 1 && currentQuestion <= countOfAllQuestions{
+        if currentQuestion >= 1 && currentQuestion <= countOfQuestions{
             
             //индикация номера вопроса
-            voprosNomerOutlet.setTitle("Вопрос №\(currentQuestion)/\(countOfAllQuestions)", for: .normal)
+            voprosNomerOutlet.setTitle("Вопрос №\(currentQuestion)/\(countOfQuestions)", for: .normal)
             
             //задаем правильный ответ в вопросе
             rightAnswer = rightAnswersArray[currentQuestion]
@@ -185,10 +190,10 @@ class ViewController: UIViewController {
     
     //функция включения следующиего вопроса
     func sledushiyVopros(){
-        if currentQuestion < countOfAllQuestions{
+        if currentQuestion < countOfQuestions{
             currentQuestion += 1
             otobragenie()
-        } else if currentQuestion == countOfAllQuestions{
+        } else if currentQuestion == countOfQuestions{
             otobragenie()
         }
     }
@@ -279,7 +284,7 @@ class ViewController: UIViewController {
     }
     
     func konecVoprosov(otvechenoVoprosov: Int){
-        if otvechenoVoprosov == countOfAllQuestions {
+        if otvechenoVoprosov == countOfQuestions {
             self.performSegue(withIdentifier: "SegueResult", sender: Any?.self)
         }
     }
@@ -290,7 +295,7 @@ class ViewController: UIViewController {
             let displayVC = segue.destination as! SecondViewController
             
             displayVC.points = points
-            displayVC.vsegoVoprosov = countOfAllQuestions
+            displayVC.vsegoVoprosov = countOfQuestions
         }
     }
     

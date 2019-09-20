@@ -1469,7 +1469,6 @@ var questionsStructArrayA_1_1 : [Questions] = [
     question8A_1_1,
     question9A_1_1,
     question10A_1_1,
-      /*
     question11A_1_1,
     question12A_1_1,
     question13A_1_1,
@@ -1620,6 +1619,6 @@ var questionsStructArrayA_1_1 : [Questions] = [
     question158A_1_1,
     question159A_1_1,
     question160A_1_1,
- */
+
 ]
 

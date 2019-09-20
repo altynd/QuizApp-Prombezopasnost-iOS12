@@ -14,14 +14,14 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myPickerView.delegate = self
-        myPickerView.dataSource = self
+    //    myPickerView.delegate = self
+     //   myPickerView.dataSource = self
         
     //    Obuchenie.isEnabled = false
     //    Obuchenie.setTitleColor(UIColor.gray, for: .normal)
         
-        Trenirovka.isEnabled = false
-        Trenirovka.setTitleColor(UIColor.gray, for: .normal)
+    //    Trenirovka.isEnabled = false
+     //   Trenirovka.setTitleColor(UIColor.gray, for: .normal)
         
     //     ExamOutlet.isEnabled = false
     //     ExamOutlet.setTitleColor(UIColor.gray, for: .normal)

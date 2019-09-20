@@ -106,18 +106,10 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             displayVC.isObuchenie = false
             displayVC.isTrenirovka = false
             displayVC.isExam = true
+            displayVC.rejim = 1
 
         }
-        else if(segue.identifier == "ObuchenSegue"){
-            let displayVC = segue.destination as! ViewController
-            
-            displayVC.indexOfKurses = nameOfKursOutlet.title(for: .normal) ?? "Курс 0.0"
-            
-            displayVC.isObuchenie = true
-            displayVC.isTrenirovka = false
-            displayVC.isExam = false
-            
-        }
+
         else if(segue.identifier == "TrenirovkaSegue"){
             let displayVC = segue.destination as! ViewController
             
@@ -126,6 +118,19 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             displayVC.isObuchenie = false
             displayVC.isTrenirovka = true
             displayVC.isExam = false
+            displayVC.rejim = 2
+            
+        }
+            
+        else if(segue.identifier == "ObuchenSegue"){
+            let displayVC = segue.destination as! ViewController
+            
+            displayVC.indexOfKurses = nameOfKursOutlet.title(for: .normal) ?? "Курс 0.0"
+            
+            displayVC.isObuchenie = true
+            displayVC.isTrenirovka = false
+            displayVC.isExam = false
+            displayVC.rejim = 3
             
         }
     }

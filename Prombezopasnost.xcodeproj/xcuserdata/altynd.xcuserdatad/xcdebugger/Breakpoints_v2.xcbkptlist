@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prombezopasnost/ViewController/ViewController.swift"
-            timestampString = "590698050.836151"
+            timestampString = "590702180.220647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "predidushiyVopros()"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "biletNomerText()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prombezopasnost/ViewController/ViewController.swift"
-            timestampString = "590698050.836822"
+            timestampString = "590702180.221041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
-            landmarkName = "otvetPlusOne(NomerVoprosa:)"
-            landmarkType = "7">
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

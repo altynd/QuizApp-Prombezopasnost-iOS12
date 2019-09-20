@@ -115,23 +115,26 @@ class ViewController: UIViewController {
                 var button:UIButton = UIButton()
                 button = view.viewWithTag(i) as! UIButton
                 
+                button.backgroundColor = UIColor.clear
+                
                 // задаем текст ответов в кнопки
                 textOtvetov(i: i, btn:button)
-
                 
                 //задаем цвета кнопок для выбранных ответов
                 cvetKnopki(btn: button)
                 
-                //ответ черным текстом
-                cherniyAnswer(btn: button)
+                if isObuchenie{
+                    //показывает правильный вариант
+                    zeleniyAnswer(btn: button, nomerVoprosa: rightAnswer)
+                }
+                
+                //цвет кнопки ответа
+                if isTrenirovka || isObuchenie {answerColor(btn: button)}
                 
                 //выключаем пустые кнопки
                 vikluchaemKnopki(i: i, btn: button)
                 
-                if isObuchenie{
-                //показывает правильный вариант
-                zeleniyAnswer(btn: button, nomerVoprosa: rightAnswer)
-                }
+
             }
         }
         konecVoprosov(otvechenoVoprosov: otvechenoVoprosov)
@@ -151,6 +154,8 @@ class ViewController: UIViewController {
     func cvetKnopki (btn:UIButton){
         if vibraniyOtvetArray[currentQuestion] > 0 {
             btn.isUserInteractionEnabled = false
+                // если тренировка то зеленый
+                if isTrenirovka{ zeleniyAnswer(btn: btn, nomerVoprosa : rightAnswer)}
             btn.setTitleColor(UIColor.gray, for: .normal)
             voprosTextOutlet.textColor = UIColor.gray
             
@@ -162,15 +167,28 @@ class ViewController: UIViewController {
         }
     }
     
-    //функция кнопки черного ответа
-    func cherniyAnswer(btn:UIButton){
+    //функция цвета ответов
+    func answerColor(btn:UIButton){
         if btn.tag == vibraniyOtvetArray[currentQuestion]{
+            if btn.tag == rightAnswer{
+                btn.backgroundColor = UIColor.green
+            }else{
+                btn.backgroundColor = UIColor.red
+            }
             btn.setTitleColor(UIColor.black, for: .normal)
         }
     }
     
     //функция зеленого правильного ответа
     func zeleniyAnswer(btn:UIButton, nomerVoprosa : Int){
+        if btn.tag == rightAnswer{
+            btn.backgroundColor = UIColor.green
+        }else{
+            btn.backgroundColor = UIColor.clear
+        }
+    }
+    //красный неправильгный
+    func redAnswer(btn:UIButton, nomerVoprosa : Int){
         if btn.tag == rightAnswer{
             btn.backgroundColor = UIColor.green
         }else{
